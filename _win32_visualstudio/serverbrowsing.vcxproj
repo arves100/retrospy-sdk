@@ -132,16 +132,16 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sb_crypt.c" />
-    <ClCompile Include="sb_queryengine.c" />
-    <ClCompile Include="sb_server.c" />
-    <ClCompile Include="sb_serverbrowsing.c" />
-    <ClCompile Include="sb_serverlist.c" />
+    <ClCompile Include="..\serverbrowsing\sb_crypt.c" />
+    <ClCompile Include="..\serverbrowsing\sb_queryengine.c" />
+    <ClCompile Include="..\serverbrowsing\sb_server.c" />
+    <ClCompile Include="..\serverbrowsing\sb_serverbrowsing.c" />
+    <ClCompile Include="..\serverbrowsing\sb_serverlist.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sb_crypt.h" />
-    <ClInclude Include="sb_internal.h" />
-    <ClInclude Include="sb_serverbrowsing.h" />
+    <ClInclude Include="..\serverbrowsing\sb_crypt.h" />
+    <ClInclude Include="..\serverbrowsing\sb_internal.h" />
+    <ClInclude Include="..\serverbrowsing\sb_serverbrowsing.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
