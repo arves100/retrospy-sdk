@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "natneg", "natneg.vcxproj", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GP", "GP.vcxproj", "{7A206B2F-F1D6-4C27-A8EB-13C9EE8B4CAB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gt2", "gt2.vcxproj", "{2EDAAE43-F747-4D0A-946E-F4D0F2491081}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -81,6 +83,14 @@ Global
 		{7A206B2F-F1D6-4C27-A8EB-13C9EE8B4CAB}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
 		{7A206B2F-F1D6-4C27-A8EB-13C9EE8B4CAB}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
 		{7A206B2F-F1D6-4C27-A8EB-13C9EE8B4CAB}.Unicode Release|x86.Build.0 = Unicode Release|Win32
+		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Debug|x86.ActiveCfg = Debug|Win32
+		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Debug|x86.Build.0 = Debug|Win32
+		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Release|x86.ActiveCfg = Release|Win32
+		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Release|x86.Build.0 = Release|Win32
+		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Unicode Debug|x86.ActiveCfg = Unicode Debug|Win32
+		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
+		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
+		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Unicode Release|x86.Build.0 = Unicode Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
