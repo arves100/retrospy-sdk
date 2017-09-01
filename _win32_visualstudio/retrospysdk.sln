@@ -33,6 +33,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "serverbrowsing", "serverbro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sc", "sc.vcxproj", "{A0FAC66C-309C-440E-AFE4-AF617BA4D060}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Voice2", "Voice2.vcxproj", "{71A7407E-5775-4964-9D12-9BBB56BF5DEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -200,6 +202,16 @@ Global
 		{A0FAC66C-309C-440E-AFE4-AF617BA4D060}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
 		{A0FAC66C-309C-440E-AFE4-AF617BA4D060}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
 		{A0FAC66C-309C-440E-AFE4-AF617BA4D060}.Unicode Release|x86.Build.0 = Unicode Release|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Debug|x86.ActiveCfg = Debug|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Debug|x86.Build.0 = Debug|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Release|x86.ActiveCfg = Release|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Release|x86.Build.0 = Release|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Template|x86.ActiveCfg = Unicode Release|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Template|x86.Build.0 = Unicode Release|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Unicode Debug|x86.ActiveCfg = Unicode Debug|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
+		{71A7407E-5775-4964-9D12-9BBB56BF5DEA}.Unicode Release|x86.Build.0 = Unicode Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
