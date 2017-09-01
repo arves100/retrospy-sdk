@@ -11,12 +11,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pingerMain.c">
+    <ClCompile Include="..\pinger\pingerMain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pinger.h">
+    <ClInclude Include="..\pinger\pinger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
