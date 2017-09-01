@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GP", "GP.vcxproj", "{7A206B
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gt2", "gt2.vcxproj", "{2EDAAE43-F747-4D0A-946E-F4D0F2491081}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gstats", "gstats.vcxproj", "{B2C14BAC-3600-41D2-BB0B-BBC462388B4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -91,6 +93,14 @@ Global
 		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
 		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
 		{2EDAAE43-F747-4D0A-946E-F4D0F2491081}.Unicode Release|x86.Build.0 = Unicode Release|Win32
+		{B2C14BAC-3600-41D2-BB0B-BBC462388B4E}.Debug|x86.ActiveCfg = Debug|Win32
+		{B2C14BAC-3600-41D2-BB0B-BBC462388B4E}.Debug|x86.Build.0 = Debug|Win32
+		{B2C14BAC-3600-41D2-BB0B-BBC462388B4E}.Release|x86.ActiveCfg = Release|Win32
+		{B2C14BAC-3600-41D2-BB0B-BBC462388B4E}.Release|x86.Build.0 = Release|Win32
+		{B2C14BAC-3600-41D2-BB0B-BBC462388B4E}.Unicode Debug|x86.ActiveCfg = Unicode Debug|Win32
+		{B2C14BAC-3600-41D2-BB0B-BBC462388B4E}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
+		{B2C14BAC-3600-41D2-BB0B-BBC462388B4E}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
+		{B2C14BAC-3600-41D2-BB0B-BBC462388B4E}.Unicode Release|x86.Build.0 = Unicode Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
