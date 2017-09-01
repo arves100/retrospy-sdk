@@ -684,7 +684,7 @@ GHIEncryptionResult ghiEncryptorSslDecryptFunc(struct GHIConnection * connection
 #include "../common/gsSSL.h"
 #include "../common/gsSHA1.h"
 #include "../common/gsRC4.h"
-#include "../md5.h"
+#include "../shared/md5.h"
 
 
 // Processor for SSL state messages (transparent to application)
@@ -1060,7 +1060,7 @@ GHIEncryptionResult ghiEncryptorSslEncryptFunc(struct GHIConnection * connection
 			//    The MAC must be computed before ciphering the plain text because
 			//    theEncryptedBuffer may be the same memory location as thePlainTextBuffer
 
-			gsSSL* sslInterface = (gsSSL*)theEncryptor->mInterface;
+			gsSSL* sslInterface2 = (gsSSL*)theEncryptor->mInterface;
 			gsSSLRecordHeaderMsg* header = NULL;
 			MD5_CTX md5;
 			int pos = 0;
@@ -1080,24 +1080,24 @@ GHIEncryptionResult ghiEncryptorSslEncryptFunc(struct GHIConnection * connection
 
 			// calculate the MAC
 			MD5Init(&md5);
-			MD5Update(&md5, sslInterface->clientWriteMACSecret, (unsigned int)sslInterface->clientWriteMACLen);
+			MD5Update(&md5, sslInterface2->clientWriteMACSecret, (unsigned int)sslInterface2->clientWriteMACLen);
 			MD5Update(&md5, (unsigned char*)GS_SSL_PAD_ONE, GS_SSL_MD5_PAD_LEN);
-			MD5Update(&md5, sslInterface->sendSeqNBO, sizeof(sslInterface->sendSeqNBO));
+			MD5Update(&md5, sslInterface2->sendSeqNBO, sizeof(sslInterface2->sendSeqNBO));
 			MD5Update(&md5, (unsigned char*)"\x17", 1); // content type application data
 			MD5Update(&md5,(unsigned char*)&lengthNBO, sizeof(lengthNBO));
 			MD5Update(&md5, (unsigned char*)thePlainTextBuffer, (unsigned int)thePlainTextLength); // **cast-away const**
 			MD5Final(MAC, &md5); // first half of MAC
 
 			MD5Init(&md5);
-			MD5Update(&md5, sslInterface->clientWriteMACSecret, (unsigned int)sslInterface->clientWriteMACLen);
+			MD5Update(&md5, sslInterface2->clientWriteMACSecret, (unsigned int)sslInterface2->clientWriteMACLen);
 			MD5Update(&md5, (unsigned char*)GS_SSL_PAD_TWO, GS_SSL_MD5_PAD_LEN);
 			MD5Update(&md5, MAC, GS_CRYPT_MD5_HASHSIZE);
 			MD5Final(MAC, &md5); // complete MAC
 
 			// apply stream cipher to data + MAC
-			RC4Encrypt(&sslInterface->sendRC4, (const unsigned char*)thePlainTextBuffer, (unsigned char*)&theEncryptedBuffer[pos], thePlainTextLength);
+			RC4Encrypt(&sslInterface2->sendRC4, (const unsigned char*)thePlainTextBuffer, (unsigned char*)&theEncryptedBuffer[pos], thePlainTextLength);
 			pos += thePlainTextLength;
-			RC4Encrypt(&sslInterface->sendRC4, MAC, (unsigned char*)&theEncryptedBuffer[pos], GS_CRYPT_MD5_HASHSIZE);
+			RC4Encrypt(&sslInterface2->sendRC4, MAC, (unsigned char*)&theEncryptedBuffer[pos], GS_CRYPT_MD5_HASHSIZE);
 			pos += GS_CRYPT_MD5_HASHSIZE;
 
 			// Now that we know the final length (data+mac+pad), write it into the header
@@ -1111,15 +1111,15 @@ GHIEncryptionResult ghiEncryptorSslEncryptFunc(struct GHIConnection * connection
 			do 
 			{
 				//int carry = 0;
-				if (sslInterface->sendSeqNBO[pos] == 0xFF) // wraparound means carry
+				if (sslInterface2->sendSeqNBO[pos] == 0xFF) // wraparound means carry
 				{
 					//carry = 1;
-					sslInterface->sendSeqNBO[pos] = 0;
+					sslInterface2->sendSeqNBO[pos] = 0;
 					pos -= 1;
 				}
 				else
 				{
-					sslInterface->sendSeqNBO[pos] += 1;
+					sslInterface2->sendSeqNBO[pos] += 1;
 					pos = 0; // end addition
 				}
 			} while(pos >= 0);
