@@ -1,0 +1,52 @@
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+#if !defined(GSI_NO_THREADS)
+#include "gsCommon.h"
+
+
+// Include platform separated functions
+#if defined(_X360)
+	#include "../common_x360/gsThreadX360.c"
+#elif defined(_XBOX)
+	//#include "../common_xbox/gsThreadXBox.c"
+#elif defined(_WIN32)
+	#include "../common_win32/gsThreadWin32.c"
+#elif defined(_MACOSX)
+	#include "../common_macosx/gsThreadMacOSX.c"
+#elif defined (_LINUX)
+	#include "../common_linux/gsThreadLinux.c"
+#elif defined(_NITRO)
+	#include "../common_nitro/gsThreadNitro.c"
+#elif defined(_PS2)
+	#include "../common_ps2/gsThreadPs2.c"
+#elif defined(_PS3)
+//  #include "../common_ps3/gsThreadPS3.c"
+#elif defined(_PSP)
+//  #include "../common_psp/gsThreadPSP.c"
+#elif defined(_REVOLUTION)
+	#include "../common_revolution/gsThreadRevoulution.c"
+#else
+	#error "Missing or unsupported platform"
+#endif
+
+
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+#if defined(__cplusplus)
+}
+#endif
+
+#endif // GSI_NO_THREADS
