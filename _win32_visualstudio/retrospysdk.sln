@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sake", "sake.vcxproj", "{8E
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "webservices", "webservices.vcxproj", "{6D4616E5-AAE2-4936-81F3-2015147C46A1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "serverbrowsing", "serverbrowsing.vcxproj", "{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -176,6 +178,16 @@ Global
 		{6D4616E5-AAE2-4936-81F3-2015147C46A1}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
 		{6D4616E5-AAE2-4936-81F3-2015147C46A1}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
 		{6D4616E5-AAE2-4936-81F3-2015147C46A1}.Unicode Release|x86.Build.0 = Unicode Release|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Debug|x86.ActiveCfg = Debug|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Debug|x86.Build.0 = Debug|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Release|x86.ActiveCfg = Release|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Release|x86.Build.0 = Release|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Template|x86.ActiveCfg = Template|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Template|x86.Build.0 = Template|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Unicode Debug|x86.ActiveCfg = Debug|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Unicode Debug|x86.Build.0 = Debug|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Unicode Release|x86.ActiveCfg = Release|Win32
+		{C0A9FA4C-7B01-4C78-954D-BB5B9CBA58D9}.Unicode Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
