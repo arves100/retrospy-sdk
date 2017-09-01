@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "brigades", "brigades.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gcdkey", "gcdkey.vcxproj", "{B84041E6-DAE0-4458-A222-7F1A76C8C8BA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qr2", "qr2.vcxproj", "{54DE3E69-59E0-4AB1-A687-76FA97616BE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -51,6 +53,14 @@ Global
 		{B84041E6-DAE0-4458-A222-7F1A76C8C8BA}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
 		{B84041E6-DAE0-4458-A222-7F1A76C8C8BA}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
 		{B84041E6-DAE0-4458-A222-7F1A76C8C8BA}.Unicode Release|x86.Build.0 = Unicode Release|Win32
+		{54DE3E69-59E0-4AB1-A687-76FA97616BE1}.Debug|x86.ActiveCfg = Debug|Win32
+		{54DE3E69-59E0-4AB1-A687-76FA97616BE1}.Debug|x86.Build.0 = Debug|Win32
+		{54DE3E69-59E0-4AB1-A687-76FA97616BE1}.Release|x86.ActiveCfg = Release|Win32
+		{54DE3E69-59E0-4AB1-A687-76FA97616BE1}.Release|x86.Build.0 = Release|Win32
+		{54DE3E69-59E0-4AB1-A687-76FA97616BE1}.Unicode Debug|x86.ActiveCfg = Unicode Debug|Win32
+		{54DE3E69-59E0-4AB1-A687-76FA97616BE1}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
+		{54DE3E69-59E0-4AB1-A687-76FA97616BE1}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
+		{54DE3E69-59E0-4AB1-A687-76FA97616BE1}.Unicode Release|x86.Build.0 = Unicode Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
