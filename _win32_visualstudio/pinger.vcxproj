@@ -19,6 +19,7 @@
     <SccLocalPath>.</SccLocalPath>
     <ProjectGuid>{CE37CD7F-1F13-48A3-A372-E96151B01BE0}</ProjectGuid>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <RootNamespace>pinger</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
