@@ -13,6 +13,6 @@ http://gamespy.net
 #define _GV_MAIN_H_
 
 #include "gv.h"
-#include "../darray.h"
+#include "../shared/darray.h"
 
 #endif

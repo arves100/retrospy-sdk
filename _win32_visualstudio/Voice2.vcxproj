@@ -247,16 +247,7 @@
     <ClCompile Include="..\Voice2\gvDirectSound.c" />
     <ClCompile Include="..\Voice2\gvFrame.c" />
     <ClCompile Include="..\Voice2\gvGSM.c" />
-    <ClCompile Include="..\Voice2\gvLogitechPS2Codecs.c" />
     <ClCompile Include="..\Voice2\gvMain.c" />
-    <ClCompile Include="..\Voice2\gvOSXAudio.c" />
-    <ClCompile Include="..\Voice2\gvPS2Audio.c" />
-    <ClCompile Include="..\Voice2\gvPS2Eyetoy.c" />
-    <ClCompile Include="..\Voice2\gvPS2Headset.c" />
-    <ClCompile Include="..\Voice2\gvPS2Spu2.c" />
-    <ClCompile Include="..\Voice2\gvPS3Audio.c" />
-    <ClCompile Include="..\Voice2\gvPS3Headset.c" />
-    <ClCompile Include="..\Voice2\gvPSPAudio.c" />
     <ClCompile Include="..\Voice2\gvSource.c" />
     <ClCompile Include="..\Voice2\gvSpeex.c" />
     <ClCompile Include="..\Voice2\gvSpeexSpu.c" />

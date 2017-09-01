@@ -20,43 +20,13 @@
     <ClCompile Include="..\Voice2\gvDevice.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Voice2\gvDirectSound.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Voice2\gvFrame.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Voice2\gvGSM.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Voice2\gvLogitechPS2Codecs.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Voice2\gvMain.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Voice2\gvOSXAudio.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Voice2\gvPS2Audio.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Voice2\gvPS2Eyetoy.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Voice2\gvPS2Headset.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Voice2\gvPS2Spu2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Voice2\gvPS3Audio.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Voice2\gvPS3Headset.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Voice2\gvPSPAudio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Voice2\gvSource.c">
@@ -69,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Voice2\gvUtil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Voice2\gvDirectSound.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
