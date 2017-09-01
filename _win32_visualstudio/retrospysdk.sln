@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "common.vcxproj", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ghttp", "ghttp.vcxproj", "{1EBCEA7A-712C-495C-AA4D-D3FDA7D8685A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "brigades", "brigades.vcxproj", "{A8E072D3-3664-4E07-82D7-AF3507D52C40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -31,6 +33,14 @@ Global
 		{1EBCEA7A-712C-495C-AA4D-D3FDA7D8685A}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
 		{1EBCEA7A-712C-495C-AA4D-D3FDA7D8685A}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
 		{1EBCEA7A-712C-495C-AA4D-D3FDA7D8685A}.Unicode Release|x86.Build.0 = Unicode Release|Win32
+		{A8E072D3-3664-4E07-82D7-AF3507D52C40}.Debug|x86.ActiveCfg = Debug|Win32
+		{A8E072D3-3664-4E07-82D7-AF3507D52C40}.Debug|x86.Build.0 = Debug|Win32
+		{A8E072D3-3664-4E07-82D7-AF3507D52C40}.Release|x86.ActiveCfg = Release|Win32
+		{A8E072D3-3664-4E07-82D7-AF3507D52C40}.Release|x86.Build.0 = Release|Win32
+		{A8E072D3-3664-4E07-82D7-AF3507D52C40}.Unicode Debug|x86.ActiveCfg = Unicode Debug|Win32
+		{A8E072D3-3664-4E07-82D7-AF3507D52C40}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
+		{A8E072D3-3664-4E07-82D7-AF3507D52C40}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
+		{A8E072D3-3664-4E07-82D7-AF3507D52C40}.Unicode Release|x86.Build.0 = Unicode Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
