@@ -294,6 +294,11 @@ void CGhttpmfcDlg::OnStart()
 {
 	UpdateData();
 
+	if (!m_headers.IsEmpty()) {
+		m_headers.AppendChar('\xD');
+		m_headers.AppendChar('\xA');
+	}
+
 	if(m_type == 0)
 	{
 		m_request = ghttpGetEx(
