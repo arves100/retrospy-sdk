@@ -1,19 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Unicode Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{8FC4EBBC-04DA-47DC-A82D-375AE405224E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>gamespySample</RootNamespace>
-    <AssemblyName>gamespySample</AssemblyName>
+    <RootNamespace>GameSpyCSharpWrapper</RootNamespace>
+    <AssemblyName>GameSpyCSharpWrapper</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <StartupObject>gamespySample.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,7 +36,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unicode Release|x86' ">
-    <OutputPath>bin\x86\Unicode Release\</OutputPath>
+    <OutputPath>..\_win32_visualstudio\Unicode Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -41,7 +47,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unicode Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Unicode Debug\</OutputPath>
+    <OutputPath>..\_win32_visualstudio\Unicode Debug\</OutputPath>
     <DefineConstants>TRACE;DEBUG;DotNet20,DotNet35,GSI_COMMON_DEBUG</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -53,6 +59,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugUnicode|x86' ">
     <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\_win32_visualstudio\Debug\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -69,24 +76,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="samples\AtlasAppProgram.cs" />
-    <Compile Include="samples\NatAppProgram.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="samples\Program.cs" />
-    <Compile Include="samples\QR2AppProgram.cs" />
-    <Compile Include="samples\SakeAppProgram.cs" />
-    <Compile Include="samples\ServerBrowserAppProgram.cs" />
-    <Compile Include="src\gamespyAtlas.cs" />
-    <Compile Include="src\gamespyAuth.cs" />
-    <Compile Include="src\gamespyBase.cs" />
-    <Compile Include="src\gamespyCommon.cs" />
-    <Compile Include="src\gamespyCommonDebug.cs" />
-    <Compile Include="src\gamespyHttp.cs" />
-    <Compile Include="src\gamespyNatNeg.cs" />
-    <Compile Include="src\gamespyQueryAndReport.cs" />
-    <Compile Include="src\gamespySake.cs" />
-    <Compile Include="src\gamespyServerBrowser.cs" />
+    <Compile Include="gamespyAtlas.cs" />
+    <Compile Include="gamespyAuth.cs" />
+    <Compile Include="gamespyBase.cs" />
+    <Compile Include="gamespyCommon.cs" />
+    <Compile Include="gamespyCommonDebug.cs" />
+    <Compile Include="gamespyHttp.cs" />
+    <Compile Include="gamespyNatNeg.cs" />
+    <Compile Include="gamespyQueryAndReport.cs" />
+    <Compile Include="gamespySake.cs" />
+    <Compile Include="gamespyServerBrowser.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
@@ -104,14 +103,16 @@
       <ProductName>.NET Framework 3.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
       <Visible>False</Visible>
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
@@ -125,6 +126,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PreBuildEvent>copy "$(ProjectDir)..\libs\WinDll $(ConfigurationName)\gamespy.dll"  "$(TargetDir)"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>
