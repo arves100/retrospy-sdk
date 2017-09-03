@@ -350,6 +350,7 @@ GHTTPRequest ghttpGetExA
 			return GHTTPInsufficientMemory;
 		}
 	}
+
 	connection->post = post;
 	connection->blocking = blocking;
 	connection->progressCallback = progressCallback;
