@@ -9,7 +9,7 @@ devsupport@gamespy.com
 */
 
 #include "../../common/gsCommon.h"
-#include "../ghttp.h"
+#include "../../ghttp/ghttp.h"
 
 #ifdef UNDER_CE
 	void RetailOutputA(CHAR *tszErr, ...);
@@ -168,9 +168,15 @@ static void ProgressCallback
 		// Display based on if we know the total size.
 		//////////////////////////////////////////////
 		if(totalSize != -1)
+#if (GSI_MAX_INTEGRAL_BITS >= 64)
+			_tprintf(_T(" (%lld / %lld bytes)\n"), bytesReceived, totalSize);
+		else
+			_tprintf(_T(" (%lld bytes)\n"), bytesReceived);
+#else
 			_tprintf(_T(" (%d / %d bytes)\n"), bytesReceived, totalSize);
 		else
 			_tprintf(_T(" (%d bytes)\n"), bytesReceived);
+#endif
 	}
 	else
 		_tprintf(_T("\n"));
