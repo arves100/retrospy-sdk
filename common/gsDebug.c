@@ -57,80 +57,48 @@ static gsi_u32 gsiDebugLog2(gsi_u32 theInt)
 // default supplied debug function, will receive debug text
 // this is platform specific
 static void gsiDebugCallback(GSIDebugCategory category, GSIDebugType type,
-						GSIDebugLevel level, const char * format, va_list params)
+	GSIDebugLevel level, const char * format, va_list params)
 {
-	#if defined(_PSP)
-		// Output line prefix
-		vprintf(format, params);
-		//gsDebugTTyPrint(string);
-	#elif defined(_PS2)
-		// Output line prefix
-		vprintf(format, params);
+#if defined(_PSP)
+	// Output line prefix
+	vprintf(format, params);
+	//gsDebugTTyPrint(string);
+#elif defined(_PS2)
+	// Output line prefix
+	vprintf(format, params);
 
-	#elif defined(_PS3)
-		// Output line prefix
-		vprintf(format, params);
+#elif defined(_PS3)
+	// Output line prefix
+	vprintf(format, params);
 
-	#elif defined(_WIN32)
-		static char string[256];
-		vsprintf_s(string, _countof(string), format, params);
-		OutputDebugStringA(string);
+#elif defined(_WIN32)
+	static char string[256];
+	vsprintf_s(string, _countof(string), format, params);
+	OutputDebugStringA(string);
 
-	#elif defined(_LINUX) || defined(_MACOSX)
-		//static char    string[256];
-		//vsprintf(string, format, params); 			
-		vprintf(format, params);
-	#elif defined(_NITRO)
-		VPrintf(format, params);
-	#elif defined(_REVOLUTION)
-		static char string[256];
-		vsprintf(string, format, params);
-		OSReport(string);
-	#else
-		va_list argptr;
-		static char    string[256];
-		va_start(argptr, format);
-		vsprintf(string, format, argptr); 
-		va_end(argptr);
-		gsDebugTTyPrint(string);
-	#endif
-	
+#elif defined(_LINUX) || defined(_MACOSX)
+	//static char    string[256];
+	//vsprintf(string, format, params); 			
+	vprintf(format, params);
+#elif defined(_NITRO)
+	VPrintf(format, params);
+#elif defined(_REVOLUTION)
+	static char string[256];
+	vsprintf(string, format, params);
+	OSReport(string);
+#else
+	va_list argptr;
+	static char    string[256];
+	va_start(argptr, format);
+	vsprintf(string, format, argptr);
+	va_end(argptr);
+	gsDebugTTyPrint(string);
+#endif
+
 	GSI_UNUSED(category);
 	GSI_UNUSED(type);
 	GSI_UNUSED(level);
 }
-
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-// generate a w32 console for debugging
-void gsOpenDebugConsole()
-{
-#ifdef _WIN32
-	// Create the WIN32 Console
-	if (!AllocConsole())
-		return;
-
-	// Redirect stderr,stdout to Win32 Console
-#ifdef CRT_SECURE_ENABLE
-	FILE* Stream = NULL;
-	freopen_s(&Stream, "CONOUT$", "w", stderr);
-	freopen_s(&Stream, "CONOUT$", "w", stdout);
-#else
-	freopen("CONOUT$", "w", stderr);
-	freopen("CONOUT$", "w", stdout);
-#endif
-
-#endif
-}
-
-void gsCloseDebugConsole()
-{
-#ifdef _WIN32
-	// Free the Console
-	FreeConsole();
-#endif
-}
-
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
