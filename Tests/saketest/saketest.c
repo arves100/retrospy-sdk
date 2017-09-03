@@ -12,6 +12,8 @@
 	#define vprintf VPrintf
 #endif
 
+#pragma comment(lib, "wsock32.lib")
+
 #define URL NULL
 
 #define GAMENAME	_T("gmtest")
@@ -671,8 +673,12 @@ static GHTTPBool DownloadCompletedCallback(GHTTPRequest request, GHTTPResult res
 		return GHTTPTrue;
 	}
 
+#if (GSI_MAX_INTEGRAL_BITS >= 64)
+	printf("File Download: Downloaded %lld byte file\n", bufferLen);
+#else
 	printf("File Download: Downloaded %d byte file\n", bufferLen);
- 
+#endif
+
 	return GHTTPTrue;
 }
 
