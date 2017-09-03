@@ -78,8 +78,13 @@ void DoGenerateKeys()
 
 	Util_RandSeed(time(NULL) ^ GetTickCount());
 	printf("How many keys would you like? ");
-	gets(resp);
 
+#ifdef _WIN32
+	gets_s(resp, 128);
+#else
+	gets(resp);
+#endif
+	
 	keyct = atoi(resp);
 
 	offset = (MAXKEYSEED - MINKEYSEED) / keyct;
@@ -150,7 +155,13 @@ void DoValidateKeys()
 	do
 	{	
 		printf("Enter a CD Key to validate, or [ENTER] to quit: ");
+
+#ifdef _WIN32
+		gets_s(resp, 128);
+#else
 		gets(resp);
+#endif
+
 		if (!resp[0])
 			return;
 		if (ValidateKey(resp))
@@ -168,7 +179,13 @@ int main(int argc, char **argv)
 	char resp[10];
 	//display a menu
 	printf("What would you like to do?\n\t1. Generate CD Keys\n\t2. Validate a CD Key\n:");
+
+#ifdef _WIN32
+	gets_s(resp, 10 );
+#else
 	gets(resp);
+#endif
+
 	if (resp[0] == '1')
 		DoGenerateKeys();
 	else
