@@ -13,7 +13,7 @@
 #include "../../common/gsCore.h"
 #include "../../common/gsAvailable.h"
 #include "../../webservices/AuthService.h"
-#include "../brigades.h"
+#include "../../brigades/brigades.h"
 
 #include <stdlib.h>
 #include <stdio.h>
