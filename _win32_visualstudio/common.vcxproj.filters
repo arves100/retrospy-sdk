@@ -65,6 +65,18 @@
     <ClCompile Include="..\shared\hashtable.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\common\gsAvailable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\gsCore.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\gsSoap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\gsUdpEngine.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common\gsAssert.h">
@@ -119,6 +131,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\shared\darray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\gsAvailable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\gsCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\gsSoap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\gsUdpEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

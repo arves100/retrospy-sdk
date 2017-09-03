@@ -242,6 +242,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\common\gsAssert.c" />
+    <ClCompile Include="..\common\gsAvailable.c" />
+    <ClCompile Include="..\common\gsCore.c" />
     <ClCompile Include="..\common\gsCrypt.c" />
     <ClCompile Include="..\common\gsDebug.c" />
     <ClCompile Include="..\common\gsLargeInt.c" />
@@ -252,8 +254,10 @@
     <ClCompile Include="..\common\gsPlatformUtil.c" />
     <ClCompile Include="..\common\gsRC4.c" />
     <ClCompile Include="..\common\gsSHA1.c" />
+    <ClCompile Include="..\common\gsSoap.c" />
     <ClCompile Include="..\common\gsSSL.c" />
     <ClCompile Include="..\common\gsStringUtil.c" />
+    <ClCompile Include="..\common\gsUdpEngine.c" />
     <ClCompile Include="..\common\gsXML.c" />
     <ClCompile Include="..\common_win32\Win32Common.c" />
     <ClCompile Include="..\shared\darray.c" />
@@ -262,7 +266,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common\gsAssert.h" />
+    <ClInclude Include="..\common\gsAvailable.h" />
     <ClInclude Include="..\common\gsCommon.h" />
+    <ClInclude Include="..\common\gsCore.h" />
     <ClInclude Include="..\common\gsCrypt.h" />
     <ClInclude Include="..\common\gsDebug.h" />
     <ClInclude Include="..\common\gsLargeInt.h" />
@@ -273,8 +279,10 @@
     <ClInclude Include="..\common\gsPlatformUtil.h" />
     <ClInclude Include="..\common\gsRC4.h" />
     <ClInclude Include="..\common\gsSHA1.h" />
+    <ClInclude Include="..\common\gsSoap.h" />
     <ClInclude Include="..\common\gsSSL.h" />
     <ClInclude Include="..\common\gsStringUtil.h" />
+    <ClInclude Include="..\common\gsUdpEngine.h" />
     <ClInclude Include="..\common\gsXML.h" />
     <ClInclude Include="..\shared\darray.h" />
     <ClInclude Include="..\shared\hashtable.h" />
