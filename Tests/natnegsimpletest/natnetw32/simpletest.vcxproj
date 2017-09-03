@@ -18,17 +18,18 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>
     <SccProvider>SAK</SccProvider>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -128,54 +129,26 @@
       <ProgramDatabaseFile>.\Debug/simpletest.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\common\gsAssert.c" />
-    <ClCompile Include="..\..\common\gsAvailable.c" />
-    <ClCompile Include="..\..\common\gsDebug.c" />
-    <ClCompile Include="..\..\common\gsMemory.c" />
-    <ClCompile Include="..\..\common\gsPlatform.c" />
-    <ClCompile Include="..\..\common\gsPlatformSocket.c" />
-    <ClCompile Include="..\..\common\gsPlatformThread.c" />
-    <ClCompile Include="..\..\common\gsPlatformUtil.c" />
-    <ClCompile Include="..\..\common\gsStringUtil.c" />
-    <ClCompile Include="..\..\common\win32\Win32Common.c" />
-    <ClCompile Include="..\..\darray.c">
+    <ClCompile Include="..\simpletest.c">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
     </ClCompile>
-    <ClCompile Include="..\NATify.c" />
-    <ClCompile Include="..\natneg.c">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-    </ClCompile>
-    <ClCompile Include="simpletest.c">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\common\gsAssert.h" />
-    <ClInclude Include="..\..\common\gsAvailable.h" />
-    <ClInclude Include="..\..\common\gsCommon.h" />
-    <ClInclude Include="..\..\common\gsDebug.h" />
-    <ClInclude Include="..\..\common\gsMemory.h" />
-    <ClInclude Include="..\..\common\gsPlatform.h" />
-    <ClInclude Include="..\..\common\gsPlatformSocket.h" />
-    <ClInclude Include="..\..\common\gsPlatformThread.h" />
-    <ClInclude Include="..\..\common\gsPlatformUtil.h" />
-    <ClInclude Include="..\..\common\gsStringUtil.h" />
-    <ClInclude Include="..\..\darray.h" />
-    <ClInclude Include="..\NATify.h" />
-    <ClInclude Include="..\natneg.h" />
-    <ClInclude Include="..\nninternal.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\changelog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\common.vcxproj">
+      <Project>{75d6c79f-699b-4c66-adc8-818e77295a08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\natneg.vcxproj">
+      <Project>{6b2b0d24-56ea-4168-b8cf-7db1a2829a6e}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
