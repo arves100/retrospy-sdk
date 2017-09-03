@@ -10,6 +10,9 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
+//Target Windows XP
+#define _WIN32_WINNT 0x0501
+
 #define VC_EXTRALEAN		// Exclude rarely-used stuff from Windows headers
 
 #include <afxwin.h>         // MFC core and standard components
@@ -20,7 +23,7 @@
 #include <afxcmn.h>			// MFC support for Windows Common Controls
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
-#include "../sc.h"
+#include "../../sc/sc.h"
 //#include "atlas_Competition_Race_Sample_App_v1.h" // Admin Site generated Header file
 #include "atlas_sc_race_v1.h" // Admin Site generated Header file
 #include "../../gp/gp.h"

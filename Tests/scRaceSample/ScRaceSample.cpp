@@ -5,6 +5,12 @@
 #include "ScRaceSample.h"
 #include "ScRaceSampleDlg.h"
 
+#if defined(_DLL) && defined(_DEBUG)
+
+#pragma comment(linker, "/NODEFAULTLIB:LIBCMTD")
+
+#endif
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
