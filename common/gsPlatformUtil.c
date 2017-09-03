@@ -363,9 +363,10 @@ char * goastrdup(const char *src)
 	char *res;
 	if(src == NULL)      //PANTS|02.11.00|check for NULL before strlen
 		return NULL;
-	res = (char *)gsimalloc(strlen(src) + 1);
+	int resSize = strlen(src) + 1;
+	res = (char *)gsimalloc(resSize);
 	if(res != NULL)      //PANTS|02.02.00|check for NULL before strcpy
-		strcpy(res, src);
+		strcpy_s(res, resSize, src);
 	return res;
 }
 
@@ -374,9 +375,10 @@ unsigned short * goawstrdup(const unsigned short *src)
 	unsigned short *res;
 	if(src == NULL)      
 		return NULL;
-	res = (unsigned short *)gsimalloc((wcslen((wchar_t*)src) + 1) * sizeof(unsigned short));
+	int resSize = (wcslen((wchar_t*)src) + 1) * sizeof(unsigned short);
+	res = (unsigned short *)gsimalloc(resSize);
 	if(res != NULL)      
-		wcscpy((wchar_t*)res, (const wchar_t*)src);
+		wcscpy_s((wchar_t*)res, resSize, (const wchar_t*)src);
 	return res;
 }
 
@@ -1474,8 +1476,9 @@ char * gsiXxteaAlg(const char *sIn, int nIn, char key[XXTEA_KEY_SIZE], int bEnc,
 	k = (unsigned int *)key;
 
 	// Load and zero-pad entire input stream as 32-bit words
-	sIn2 = (char *)gsimalloc((size_t)(4 * nIn));
-	strcpy(sIn2, sIn);
+	size_t sIn2Size = (size_t)(4 * nIn);
+	sIn2 = (char *)gsimalloc(sIn2Size);
+	strcpy_s(sIn2, sIn2Size ,sIn);
 	gsiPadRight( sIn2, '\0', 4*nIn);
 	v = (unsigned int *)sIn2;
 

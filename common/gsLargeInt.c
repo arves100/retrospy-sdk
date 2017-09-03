@@ -1764,9 +1764,10 @@ gsi_bool gsLargeIntSetFromHexString(gsLargeInt_t *lint, const char* hexstream)
 	while(len > 0)
 	{
 		if(len >= 2)
-			sscanf((char*)(hexstream+len-2), "%02x", &temp); // sscanf requires a 4 byte dest
+			sscanf_s((char*)(hexstream+len-2), "%02x", &temp); // sscanf requires a 4 byte dest
 		else
-			sscanf((char*)(hexstream+len-1), "%01x", &temp); // sscanf requires a 4 byte dest
+			sscanf_s((char*)(hexstream+len-1), "%01x", &temp); // sscanf requires a 4 byte dest
+
 		if(byteIndex == 0)
 			*writePos = 0;
 		*writePos |= (temp << (byteIndex * 8));

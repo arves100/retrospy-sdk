@@ -77,6 +77,9 @@
     <ClCompile Include="..\common\gsUdpEngine.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\common\gsCRTSecureMacro.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common\gsAssert.h">

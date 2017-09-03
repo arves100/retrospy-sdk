@@ -476,6 +476,37 @@ extern gsi_u16 gsiByteOrderSwap16(gsi_u16);
 extern gsi_u32 gsiByteOrderSwap32(gsi_u32);
 extern gsi_u64 gsiByteOrderSwap64(gsi_u64);
 
+// Fix CRT_SECURE stuff in Windows
+#if defined _MSC_VER || _MSC_VER < 1400
+	#define CRT_SECURE_ENABLE
+#endif
+
+#ifndef CRT_SECURE_ENABLE
+#define vsprintf_s(buffer, buffersize, format, ArgList) vsprintf(buffer, format, ArgList)
+#define strncpy_s(dest, destsize, src, maxcount) strncpy(dest, src, maxcount)
+#define wcscpy_s(dest, destsize, src) wcscpy(dest, src)
+#define strcpy_s(dest, destsize, src) strcpy(dest, src)
+#define sscanf_s sscanf
+
+// Conversions from Windows CRT _s functions to Standard CRT functions
+extern int sprintf_s(char* const _Buffer, const size_t BufferCount, const char* Format, ...);
+#else
+// Conversions from Standard CRT functions to Windows CRT _s functons
+extern struct tm* gmtime_secure(const time_t* t);
+extern FILE* fopen_secure(const char* file, const char* mode);
+extern char* ctime_secure(const time_t* t);
+
+// Define variables to fix global use
+#define gmtime gmtime_secure
+#define fopen fopen_secure
+#define ctime ctime_secure
+#endif
+
+// Fix for Compilers that dosen't have countof
+#ifndef _countof
+#define _countof(x) x
+#endif
+
 
 #ifdef __cplusplus
 }

@@ -73,7 +73,7 @@ static void gsiDebugCallback(GSIDebugCategory category, GSIDebugType type,
 
 	#elif defined(_WIN32)
 		static char string[256];
-		vsprintf(string, format, params); 			
+		vsprintf_s(string, _countof(string), format, params);
 		OutputDebugStringA(string);
 
 	#elif defined(_LINUX) || defined(_MACOSX)
@@ -216,7 +216,7 @@ static void HexEncode16(const char* theInStream, char* theOutStream,
 		unsigned char aChar = (unsigned char)(*theInStream++);
 
 		// Write one byte in hex form
-		sprintf(theOutStream, "%02X", aChar);
+		sprintf_s(theOutStream, sizeof(aChar)+1, "%02X", aChar);
 
 		// Write the printable character
 		if (isgraph(aChar))

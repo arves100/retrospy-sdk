@@ -26,7 +26,7 @@ void  gsDebugAssert				(const char *szError,const char *szText, const char *szFi
 {
 	char String[256];
 	// format into buffer 
-	sprintf(&String[0], szError,szText,szFile,line);
+	sprintf_s(&String[0], _countof(String), szError,szText,szFile,line);
 
 	// call plat specific handler
 	(*gsDebugAssertHandler)(String);

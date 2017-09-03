@@ -63,7 +63,7 @@ void GSIStartAvailableCheckA(const char * gamename)
 	GS_ASSERT(gamename)
 
 	// store the gamename
-	strcpy(__GSIACGamename, gamename);
+	strcpy_s(__GSIACGamename, _countof(__GSIACGamename), gamename);
 
 	// clear the sock
 	AC.sock = INVALID_SOCKET;
@@ -74,7 +74,7 @@ void GSIStartAvailableCheckA(const char * gamename)
 	// setup the hostname
 	override = GSIACHostname[0];
 	if(!override)
-		sprintf(hostname, "%s.available." GSI_DOMAIN_NAME, gamename);
+		sprintf_s(hostname, _countof(hostname), "%s.available." GSI_DOMAIN_NAME, gamename);
 
 	// get the master address
 	rcode = get_sockaddrin(override?GSIACHostname:hostname, MASTER_PORT, &AC.address);

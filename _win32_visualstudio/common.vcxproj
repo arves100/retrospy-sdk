@@ -244,6 +244,7 @@
     <ClCompile Include="..\common\gsAssert.c" />
     <ClCompile Include="..\common\gsAvailable.c" />
     <ClCompile Include="..\common\gsCore.c" />
+    <ClCompile Include="..\common\gsCRTSecureMacro.c" />
     <ClCompile Include="..\common\gsCrypt.c" />
     <ClCompile Include="..\common\gsDebug.c" />
     <ClCompile Include="..\common\gsLargeInt.c" />

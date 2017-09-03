@@ -12,7 +12,7 @@
 		GSI_UNUSED(theLevel);
 		{
 			static char    string[256];
-			vsprintf(string, theTokenStr, theParamList); 			
+			vsprintf_s(string, _countof(string), theTokenStr, theParamList); 			
 			OutputDebugString(string);
 		}
 		printf("[%s][%s] ", 
