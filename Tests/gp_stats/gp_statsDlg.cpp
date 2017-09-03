@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "gp_stats.h"
 #include "gp_statsDlg.h"
-#include "../gpersist.h"
+#include "../../gstats/gpersist.h"
 #include "../../ghttp/ghttp.h"
 #include "../../common/gsAvailable.h"
 
