@@ -13,7 +13,7 @@ Please see the GameSpy Persistent Storage SDK for more info
 #include <stdarg.h>
 #include "../../common/gsCommon.h"
 #include "../../common/gsAvailable.h"
-#include "../gpersist.h"
+#include "../../gstats/gpersist.h"
 
 #ifdef UNDER_CE
 	void RetailOutputA(CHAR *tszErr, ...);

@@ -3,7 +3,7 @@
 #include <conio.h>
 
 #define PINGER_UDP_PING_SIZE  64
-#include "../pinger.h"
+#include "../../pinger/pinger.h"
 
 void pinged(unsigned int IP,
 			unsigned short port,
