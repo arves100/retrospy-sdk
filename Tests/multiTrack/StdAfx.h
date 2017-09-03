@@ -19,7 +19,7 @@
 #include <afxcmn.h>			// MFC support for Windows Common Controls
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
-#include "../gstats.h"
+#include "../../gstats/gstats.h"
 #include "../../gp/gp.h"
 #include "../../ghttp/ghttp.h"
 #include "../../gt2/gt2.h"
