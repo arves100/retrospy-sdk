@@ -1,10 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "../gt2.h"
-#include "../gt2Encode.h"
+#include "../../gt2/gt2.h"
+#include "../../gt2/gt2Encode.h"
 
 #define TEST_ENCODE_DECODE
+
+#pragma comment(lib, "wsock32.lib")
 
 #ifdef UNDER_CE
 	void RetailOutputA(CHAR *tszErr, ...);
