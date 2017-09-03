@@ -16,7 +16,7 @@ devsupport@gamespy.com
 #include "../common/gsCommon.h"
 #include "../gcdkey/gcdkeyc.h"
 
-#pragma comment(lib, "ws2_32.lib")
+#pragma comment(lib, "wsock32.lib")
 
 #define DEFAULT_SERVER "127.0.0.1"	// Run gcdkeyserver app on local host
 #define DEFAULT_PORT 2000
