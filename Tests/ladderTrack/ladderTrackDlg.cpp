@@ -951,7 +951,7 @@ void CLadderTrackDlg::FakeStats()
 	char response[33];
 	CString msg;
 
-	srand(time(NULL));
+	srand(_time32(NULL));
 
 	for(i = 0 ; i < total ; i++)
 	{
