@@ -20,7 +20,7 @@ the Server Browisng SDK.
 #include "../../common/gsAvailable.h"
 #include <conio.h>
 
-
+#pragma comment(lib, "wsock32.lib")
 
 #define NUM_SIMUL_QUERIES 10
 
