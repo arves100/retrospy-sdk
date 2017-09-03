@@ -423,7 +423,7 @@ GHTTPBool ghiAppendIntToBuffer
 {
 	char intValue[16];
 
-	sprintf(intValue, "%d", i);
+	sprintf_s(intValue, _countof(intValue), "%d", i);
 
 	return ghiAppendDataToBuffer(buffer, intValue, 0);
 }
