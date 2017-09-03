@@ -1,4 +1,4 @@
-#include "../gv.h"
+#include "../../Voice2/gv.h"
 #include <stdio.h>
 #include <math.h>
 #if defined(_WIN32)

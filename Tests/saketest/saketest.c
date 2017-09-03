@@ -2,7 +2,7 @@
 #include "../../common/gsAvailable.h"
 #include "../../common/gsCore.h"
 #include "../../common/gsSoap.h"
-#include "../sake.h"
+#include "../../sake/sake.h"
 #include "../../ghttp/ghttp.h"
 #include "../../gp/gp.h"
 

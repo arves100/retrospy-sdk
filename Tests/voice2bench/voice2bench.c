@@ -1,4 +1,4 @@
-#include "../gv.h"
+#include "../../Voice2/gv.h"
 #include "voicesample.h"
 #include <stdio.h>
 

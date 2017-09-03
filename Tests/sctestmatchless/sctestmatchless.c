@@ -4,7 +4,7 @@
 #include "../../common/gsCore.h"
 #include "../../common/gsAvailable.h"
 #include "../../webservices/AuthService.h"
-#include "../sc.h"
+#include "../../sc/sc.h"
 
 #include <float.h>
 

@@ -14,8 +14,8 @@ the Server Browisng SDK.
 
 ******/
 
-#include "../sb_serverbrowsing.h"
-#include "../sb_internal.h"
+#include "../../serverbrowsing/sb_serverbrowsing.h"
+#include "../../serverbrowsing/sb_internal.h"
 #include "../../qr2/qr2.h"
 #include "../../common/gsAvailable.h"
 #include <conio.h>
