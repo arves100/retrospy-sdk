@@ -14,11 +14,13 @@ Copyright 2000 GameSpy Industries, Inc
 
 ******/
 
+#pragma comment(lib, "wsock32.lib")
+
 
 /********
 INCLUDES
 ********/
-#include "../gt2.h"
+#include "../../gt2/gt2.h"
 #include "../../qr2/qr2.h"
 
 #include <stdlib.h>
