@@ -3,6 +3,8 @@
 #include "../../shared/darray.h"
 #include <time.h>
 
+#pragma comment(lib, "wsock32.lib")
+
 
 #define STATS 1
 
