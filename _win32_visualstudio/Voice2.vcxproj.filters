@@ -35,9 +35,6 @@
     <ClCompile Include="..\Voice2\gvSpeex.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Voice2\gvSpeexSpu.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Voice2\gvUtil.c">
       <Filter>Source Files</Filter>
     </ClCompile>

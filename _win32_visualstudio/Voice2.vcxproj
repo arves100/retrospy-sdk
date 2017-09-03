@@ -250,7 +250,6 @@
     <ClCompile Include="..\Voice2\gvMain.c" />
     <ClCompile Include="..\Voice2\gvSource.c" />
     <ClCompile Include="..\Voice2\gvSpeex.c" />
-    <ClCompile Include="..\Voice2\gvSpeexSpu.c" />
     <ClCompile Include="..\Voice2\gvUtil.c" />
   </ItemGroup>
   <ItemGroup>
