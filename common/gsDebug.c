@@ -100,8 +100,36 @@ static void gsiDebugCallback(GSIDebugCategory category, GSIDebugType type,
 	GSI_UNUSED(level);
 }
 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// generate a w32 console for debugging
+void gsOpenDebugConsole()
+{
+#ifdef _WIN32
+	// Create the WIN32 Console
+	if (!AllocConsole())
+		return;
 
+	// Redirect stderr,stdout to Win32 Console
+#ifdef CRT_SECURE_ENABLE
+	FILE* Stream = NULL;
+	freopen_s(&Stream, "CONOUT$", "w", stderr);
+	freopen_s(&Stream, "CONOUT$", "w", stdout);
+#else
+	freopen("CONOUT$", "w", stderr);
+	freopen("CONOUT$", "w", stdout);
+#endif
 
+#endif
+}
+
+void gsCloseDebugConsole()
+{
+#ifdef _WIN32
+	// Free the Console
+	FreeConsole();
+#endif
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////

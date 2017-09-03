@@ -183,6 +183,13 @@ FILE* gsGetDebugFile();
 
 #endif
 
+#if defined(_WIN32)
+
+void gsCloseDebugConsole();
+void gsOpenDebugConsole();
+
+#endif
+
 // Set a callback to be triggered with debug output
 void  gsSetDebugCallback(GSIDebugCallback theCallback);
 
