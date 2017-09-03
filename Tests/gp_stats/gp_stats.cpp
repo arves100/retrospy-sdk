@@ -11,6 +11,10 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
+#if defined(_DLL) && defined(_DEBUG)
+#pragma comment(linker, "/NODEFAULTLIB:LIBCMTD")
+#endif
+
 /////////////////////////////////////////////////////////////////////////////
 // CGp_statsApp
 
