@@ -12,7 +12,7 @@
 // CSbmfcsampleDlg dialog
 
 //SB - header
-#include "..\sb_serverbrowsing.h"
+#include "..\..\serverbrowsing\sb_serverbrowsing.h"
 #include "..\..\qr2\qr2regkeys.h"
 #include "..\..\common\gsAvailable.h"
 
