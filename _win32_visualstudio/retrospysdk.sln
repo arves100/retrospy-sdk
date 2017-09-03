@@ -59,6 +59,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gpstress", "..\Tests\gpstre
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gptest", "..\Tests\gptest\gptest.vcxproj", "{E6B3FC4E-7F99-47F1-A57E-55ED2F3863A8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gptestc", "..\Tests\gptestc\gpw32\gptestc.vcxproj", "{053EC363-5360-4CE4-B476-A5108293C5FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug_RTL_dll|x86 = Debug_RTL_dll|x86
@@ -721,6 +723,30 @@ Global
 		{E6B3FC4E-7F99-47F1-A57E-55ED2F3863A8}.Unicode Debug|x86.Build.0 = Debug|Win32
 		{E6B3FC4E-7F99-47F1-A57E-55ED2F3863A8}.Unicode Release|x86.ActiveCfg = Release|Win32
 		{E6B3FC4E-7F99-47F1-A57E-55ED2F3863A8}.Unicode Release|x86.Build.0 = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Debug_RTL_dll|x86.ActiveCfg = Debug|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Debug_RTL_dll|x86.Build.0 = Debug|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Debug_WM5_PPC_ARM|x86.ActiveCfg = Debug|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Debug_WM5_PPC_ARM|x86.Build.0 = Debug|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Debug|x86.ActiveCfg = Debug|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Debug|x86.Build.0 = Debug|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_Dynamic|x86.ActiveCfg = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_Dynamic|x86.Build.0 = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_RTL_dll|x86.ActiveCfg = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_RTL_dll|x86.Build.0 = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_SSE|x86.ActiveCfg = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_SSE|x86.Build.0 = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_SSE2|x86.ActiveCfg = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_SSE2|x86.Build.0 = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_WM5_PPC_ARM|x86.ActiveCfg = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release_WM5_PPC_ARM|x86.Build.0 = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release|x86.ActiveCfg = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Release|x86.Build.0 = Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Template|x86.ActiveCfg = Unicode Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Template|x86.Build.0 = Unicode Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Unicode Debug|x86.ActiveCfg = Unicode Debug|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
+		{053EC363-5360-4CE4-B476-A5108293C5FA}.Unicode Release|x86.Build.0 = Unicode Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -736,6 +762,7 @@ Global
 		{498F506A-B4A6-41C7-897F-5327D3557E5A} = {DFAF7262-39B3-454C-8B4E-D88169E5F2B1}
 		{ADC08350-16C5-4822-A04A-1AD5133CF64D} = {DFAF7262-39B3-454C-8B4E-D88169E5F2B1}
 		{E6B3FC4E-7F99-47F1-A57E-55ED2F3863A8} = {DFAF7262-39B3-454C-8B4E-D88169E5F2B1}
+		{053EC363-5360-4CE4-B476-A5108293C5FA} = {DFAF7262-39B3-454C-8B4E-D88169E5F2B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {834F434D-FADB-437A-BF10-69B878F2B6FA}

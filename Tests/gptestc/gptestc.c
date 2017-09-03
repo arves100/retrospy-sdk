@@ -1,4 +1,4 @@
-#include "../gp.h"
+#include "../../GP/gp.h"
 #include "../../common/gsAvailable.h"
 
 #if defined(_WIN32) && !defined(UNDER_CE)
