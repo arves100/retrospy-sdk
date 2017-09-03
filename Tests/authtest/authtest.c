@@ -11,7 +11,7 @@
 #include "../../common/gsCore.h"
 #include "../../common/gsAvailable.h"
 #include "../../GP/gp.h"
-#include "../AuthService.h"
+#include "../../webservices/AuthService.h"
 
 #if defined(_PS3)
     #include <np.h>
@@ -135,9 +135,9 @@ static gsi_bool isBackendAvailable()
 static void myLoginCallback(GHTTPResult httpResult, WSLoginResponse * theResponse, void * theUserData)
 {
     if (httpResult != GHTTPSuccess)
-        printf("* %s * Failed on player login, HTTP error: %s (%d)\n", (char*)theUserData, ghttpResultString(httpResult), httpResult);
+        printf("* %s * Failed on player login, HTTP error: (%d)\n", (char*)theUserData, /*ghttpResultString(httpResult),*/ httpResult);
     else if (theResponse->mLoginResult != WSLogin_Success)
-		printf("* %s * Failed on player login, Login result: %s (%d)\n", (char*)theUserData, wsLoginValueString(theResponse->mLoginResult), theResponse->mLoginResult);
+		printf("* %s * Failed on player login, Login result: (%d)\n", (char*)theUserData, /*wsLoginValueString(theResponse->mLoginResult),*/ theResponse->mLoginResult);
     else //Login worked!
     {
         _tprintf(_T("* %s * Player '%s' logged in.\n"), (char*)theUserData, theResponse->mCertificate.mUniqueNick);
@@ -166,13 +166,13 @@ static void myPlayerLogin(gsi_u8 logintype, const gsi_char * nick, const gsi_cha
     {
         case AUTHTEST_LOGIN_PROFILE:
             // login using default partnercode, namespaceid
-            result = wsLoginProfile(AUTHTEST_GAME_ID, WSLogin_PARTNERCODE_GAMESPY, WSLogin_NAMESPACE_SHARED_UNIQUE, 
+            result = wsLoginProfile(/*AUTHTEST_GAME_ID, */WSLogin_PARTNERCODE_GAMESPY, WSLogin_NAMESPACE_SHARED_UNIQUE, 
                 nick, AUTHTEST_EMAIL, password, _T(""), myLoginCallback, _T("wsLoginProfile"));
             break;
 
         case AUTHTEST_LOGIN_UNIQUE:
             // login using default partnercode, namespaceid
-            result = wsLoginUnique(AUTHTEST_GAME_ID, WSLogin_PARTNERCODE_GAMESPY, WSLogin_NAMESPACE_SHARED_UNIQUE, 
+            result = wsLoginUnique(/*AUTHTEST_GAME_ID,*/ WSLogin_PARTNERCODE_GAMESPY, WSLogin_NAMESPACE_SHARED_UNIQUE, 
                 nick, password, _T(""), myLoginCallback, _T("wsLoginUnique"));
             break;
 
@@ -180,7 +180,7 @@ static void myPlayerLogin(gsi_u8 logintype, const gsi_char * nick, const gsi_cha
             // -- *NOTE* the values passed in here for namespaceid/partnerid are ignored by
             // -- the AuthService for RemoteAuth logins. These values are obtained from the 
             // -- AuthToken itself.
-			result = wsLoginRemoteAuth(AUTHTEST_GAME_ID, 0, 0, nick, password, myLoginCallback, _T("wsLoginRemoteAuth"));
+			result = wsLoginRemoteAuth(/*AUTHTEST_GAME_ID,*/ 0, 0, nick, password, myLoginCallback, _T("wsLoginRemoteAuth"));
             break;
 
         default:
@@ -209,7 +209,7 @@ static void myPlayerLogin(gsi_u8 logintype, const gsi_char * nick, const gsi_cha
 // Login tests for non-PS3. Executes each one in turn with pre-defined identifiers.
 void RunLoginTests(int argc, char *argv[])
 {
-	wsSetGameCredentials(ACCESS_KEY, AUTHTEST_GAME_ID, SECRET_KEY);
+//	wsSetGameCredentials(ACCESS_KEY, AUTHTEST_GAME_ID, SECRET_KEY);
 
     myPlayerLogin(AUTHTEST_LOGIN_REMOTEAUTH, AUTHTEST_TOKEN, AUTHTEST_CHALLENGE);
     myPlayerLogin(AUTHTEST_LOGIN_UNIQUE, AUTHTEST_NICK, AUTHTEST_PASSWORD);

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "common.vcxproj", "{75D6C79F-699B-4C66-ADC8-818E77295A08}"
 EndProject
@@ -44,6 +44,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ghttpmfc", "..\Tests\ghttpmfc\ghttpmfc.vcxproj", "{0DC21D1C-D515-43C9-969C-29B89E0A8A20}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ghttpc", "..\Tests\ghttpc\ghttpw32\ghttpc.vcxproj", "{98843D8B-9150-4B62-8560-BB9AB8E37926}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "authtest", "..\Tests\authtest\authw32\authtest.vcxproj", "{DBAE204C-144E-4DA1-8233-80C822524AF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -539,6 +541,30 @@ Global
 		{98843D8B-9150-4B62-8560-BB9AB8E37926}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
 		{98843D8B-9150-4B62-8560-BB9AB8E37926}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
 		{98843D8B-9150-4B62-8560-BB9AB8E37926}.Unicode Release|x86.Build.0 = Unicode Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Debug_RTL_dll|x86.ActiveCfg = Debug|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Debug_RTL_dll|x86.Build.0 = Debug|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Debug_WM5_PPC_ARM|x86.ActiveCfg = Debug|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Debug_WM5_PPC_ARM|x86.Build.0 = Debug|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Debug|x86.ActiveCfg = Debug|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Debug|x86.Build.0 = Debug|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_Dynamic|x86.ActiveCfg = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_Dynamic|x86.Build.0 = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_RTL_dll|x86.ActiveCfg = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_RTL_dll|x86.Build.0 = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_SSE|x86.ActiveCfg = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_SSE|x86.Build.0 = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_SSE2|x86.ActiveCfg = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_SSE2|x86.Build.0 = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_WM5_PPC_ARM|x86.ActiveCfg = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release_WM5_PPC_ARM|x86.Build.0 = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release|x86.ActiveCfg = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Release|x86.Build.0 = Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Template|x86.ActiveCfg = Unicode Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Template|x86.Build.0 = Unicode Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Unicode Debug|x86.ActiveCfg = Unicode Debug|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Unicode Debug|x86.Build.0 = Unicode Debug|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Unicode Release|x86.ActiveCfg = Unicode Release|Win32
+		{DBAE204C-144E-4DA1-8233-80C822524AF9}.Unicode Release|x86.Build.0 = Unicode Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -547,5 +573,9 @@ Global
 		{E972C52F-9E85-4D65-B19C-031E511E9DB4} = {E3959DF9-FA3A-4ACF-AB02-50AAE078DD2B}
 		{0DC21D1C-D515-43C9-969C-29B89E0A8A20} = {DFAF7262-39B3-454C-8B4E-D88169E5F2B1}
 		{98843D8B-9150-4B62-8560-BB9AB8E37926} = {DFAF7262-39B3-454C-8B4E-D88169E5F2B1}
+		{DBAE204C-144E-4DA1-8233-80C822524AF9} = {DFAF7262-39B3-454C-8B4E-D88169E5F2B1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {834F434D-FADB-437A-BF10-69B878F2B6FA}
 	EndGlobalSection
 EndGlobal
