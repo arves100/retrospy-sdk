@@ -31,8 +31,17 @@ END_MESSAGE_MAP()
 
 CGhttpmfcApp::CGhttpmfcApp()
 {
+#ifdef GSI_COMMON_DEBUG
+	gsOpenDebugConsole();
+#endif
 	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
+}
+
+CGhttpmfcApp::~CGhttpmfcApp() {
+#ifdef GSI_COMMON_DEBUG
+	gsCloseDebugConsole();
+#endif
 }
 
 /////////////////////////////////////////////////////////////////////////////

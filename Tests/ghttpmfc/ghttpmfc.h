@@ -23,6 +23,7 @@ class CGhttpmfcApp : public CWinApp
 {
 public:
 	CGhttpmfcApp();
+	~CGhttpmfcApp();
 
 // Overrides
 	// ClassWizard generated virtual function overrides
