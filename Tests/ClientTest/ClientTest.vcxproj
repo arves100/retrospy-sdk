@@ -15,16 +15,17 @@
     <RootNamespace>ClientTest</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <ProjectName>ClientTest</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -79,6 +80,7 @@
       <ProgramDatabaseFile>$(OutDir)ClientTest.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -102,33 +104,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\common\gsAssert.c" />
-    <ClCompile Include="..\..\common\gsAvailable.c" />
-    <ClCompile Include="..\..\common\gsDebug.c" />
-    <ClCompile Include="..\..\common\gsMemory.c" />
-    <ClCompile Include="..\..\common\gsPlatform.c" />
-    <ClCompile Include="..\..\common\gsPlatformSocket.c" />
-    <ClCompile Include="..\..\common\gsPlatformThread.c" />
-    <ClCompile Include="..\..\common\gsPlatformUtil.c" />
-    <ClCompile Include="..\..\common\gsStringUtil.c" />
-    <ClCompile Include="..\..\common\win32\Win32Common.c" />
-    <ClCompile Include="..\..\md5c.c" />
-    <ClCompile Include="..\gcdkeyc.c" />
     <ClCompile Include="gcdkeyclienttest.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\common\gsAssert.h" />
-    <ClInclude Include="..\..\common\gsAvailable.h" />
-    <ClInclude Include="..\..\common\gsCommon.h" />
-    <ClInclude Include="..\..\common\gsDebug.h" />
-    <ClInclude Include="..\..\common\gsMemory.h" />
-    <ClInclude Include="..\..\common\gsPlatform.h" />
-    <ClInclude Include="..\..\common\gsPlatformSocket.h" />
-    <ClInclude Include="..\..\common\gsPlatformThread.h" />
-    <ClInclude Include="..\..\common\gsPlatformUtil.h" />
-    <ClInclude Include="..\..\common\gsStringUtil.h" />
-    <ClInclude Include="..\..\md5.h" />
-    <ClInclude Include="..\gcdkeyc.h" />
+    <ProjectReference Include="..\..\_win32_visualstudio\common.vcxproj">
+      <Project>{75d6c79f-699b-4c66-adc8-818e77295a08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_win32_visualstudio\gcdkey.vcxproj">
+      <Project>{b84041e6-dae0-4458-a222-7f1a76c8c8ba}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
