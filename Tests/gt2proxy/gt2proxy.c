@@ -1,6 +1,6 @@
 
-#include "../gt2.h"
-#include "../../darray.h"
+#include "../../gt2/gt2.h"
+#include "../../shared/darray.h"
 #include <time.h>
 
 
@@ -377,7 +377,7 @@ void DisplayStats(void)
 	// Print stats.
 	///////////////
 	printf("Proxying since %s", gsiSecondsToString(&ctimeTime));
-	printf("(%d days, %d hours, %d minutes, %d seconds)\n",
+	printf("(%lld days, %lld hours, %lld minutes, %lld seconds)\n",
 		days,
 		hours,
 		minutes,
