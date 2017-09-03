@@ -6,7 +6,7 @@
 ** INCLUDES **
 *************/
 #include <limits.h>
-#include "../gp.h"
+#include "../../GP/gp.h"
 #include "../../common/gsAvailable.h"
 
 /************

@@ -345,7 +345,7 @@ void CheckResponse(GPConnection * connection, void * arg_, void * param)
 	CString strMessage;
 	char buf[16];
 
-	strMessage.Format("%s@%s (%s)\n", dlg->m_nick, dlg->m_email, dlg->m_password);
+	strMessage.Format("%s@%s (%s)\n", dlg->m_nick.GetString(), dlg->m_email.GetString(), dlg->m_password.GetString());
 
 	if(arg->result == GP_NO_ERROR)
 	{
@@ -1223,7 +1223,7 @@ void CGptestDlg::OnDestroy()
 	file = fopen("login.txt", "wt");
 	if(file)
 	{
-		fprintf(file, "%s\n%s\n%s\n%s", m_email, m_nick, m_password, m_uniquenick);
+		fprintf(file, "%s\n%s\n%s\n%s", m_email.GetString(), m_nick.GetString(), m_password.GetString(), m_uniquenick.GetString());
 		fclose(file);
 	}
 
