@@ -268,43 +268,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\common\gsAssert.c" />
-    <ClCompile Include="..\..\common\gsAvailable.c" />
-    <ClCompile Include="..\..\common\gsDebug.c" />
-    <ClCompile Include="..\..\common\gsMemory.c" />
-    <ClCompile Include="..\..\common\gsPlatform.c" />
-    <ClCompile Include="..\..\common\gsPlatformSocket.c" />
-    <ClCompile Include="..\..\common\gsPlatformThread.c" />
-    <ClCompile Include="..\..\common\gsPlatformUtil.c" />
-    <ClCompile Include="..\..\common\gsStringUtil.c" />
-    <ClCompile Include="..\..\common\win32\Win32Common.c" />
-    <ClCompile Include="..\..\darray.c" />
-    <ClCompile Include="..\..\natneg\NATify.c" />
-    <ClCompile Include="..\..\natneg\natneg.c" />
-    <ClCompile Include="..\qr2.c" />
-    <ClCompile Include="..\qr2regkeys.c" />
-    <ClCompile Include="qr2csample.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\common\gsAssert.h" />
-    <ClInclude Include="..\..\common\gsAvailable.h" />
-    <ClInclude Include="..\..\common\gsCommon.h" />
-    <ClInclude Include="..\..\common\gsDebug.h" />
-    <ClInclude Include="..\..\common\gsMemory.h" />
-    <ClInclude Include="..\..\common\gsPlatform.h" />
-    <ClInclude Include="..\..\common\gsPlatformSocket.h" />
-    <ClInclude Include="..\..\common\gsPlatformThread.h" />
-    <ClInclude Include="..\..\common\gsPlatformUtil.h" />
-    <ClInclude Include="..\..\common\gsStringUtil.h" />
-    <ClInclude Include="..\..\darray.h" />
-    <ClInclude Include="..\..\natneg\NATify.h" />
-    <ClInclude Include="..\..\natneg\natneg.h" />
-    <ClInclude Include="..\..\natneg\nninternal.h" />
-    <ClInclude Include="..\qr2.h" />
-    <ClInclude Include="..\qr2regkeys.h" />
+    <ClCompile Include="..\qr2csample.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\changelog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\common.vcxproj">
+      <Project>{75d6c79f-699b-4c66-adc8-818e77295a08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\natneg.vcxproj">
+      <Project>{6b2b0d24-56ea-4168-b8cf-7db1a2829a6e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\qr2.vcxproj">
+      <Project>{54de3e69-59e0-4ab1-a687-76fa97616be1}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

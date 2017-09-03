@@ -261,131 +261,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\common\gsAssert.c" />
-    <ClCompile Include="..\..\common\gsAvailable.c" />
-    <ClCompile Include="..\..\common\gsCore.c" />
-    <ClCompile Include="..\..\common\gsCrypt.c" />
-    <ClCompile Include="..\..\common\gsDebug.c" />
-    <ClCompile Include="..\..\common\gsLargeInt.c" />
-    <ClCompile Include="..\..\common\gsMemory.c" />
-    <ClCompile Include="..\..\common\gsPlatform.c" />
-    <ClCompile Include="..\..\common\gsPlatformSocket.c" />
-    <ClCompile Include="..\..\common\gsPlatformThread.c" />
-    <ClCompile Include="..\..\common\gsPlatformUtil.c" />
-    <ClCompile Include="..\..\common\gsRC4.c" />
-    <ClCompile Include="..\..\common\gsSHA1.c" />
-    <ClCompile Include="..\..\common\gsSoap.c" />
-    <ClCompile Include="..\..\common\gsSSL.c" />
-    <ClCompile Include="..\..\common\gsStringUtil.c" />
-    <ClCompile Include="..\..\common\gsUdpEngine.c" />
-    <ClCompile Include="..\..\common\gsXML.c" />
-    <ClCompile Include="..\..\common\win32\Win32Common.c" />
-    <ClCompile Include="..\..\darray.c" />
-    <ClCompile Include="..\..\ghttp\ghttpBuffer.c" />
-    <ClCompile Include="..\..\ghttp\ghttpCallbacks.c" />
-    <ClCompile Include="..\..\ghttp\ghttpCommon.c" />
-    <ClCompile Include="..\..\ghttp\ghttpConnection.c" />
-    <ClCompile Include="..\..\ghttp\ghttpEncryption.c" />
-    <ClCompile Include="..\..\ghttp\ghttpMain.c" />
-    <ClCompile Include="..\..\ghttp\ghttpPost.c" />
-    <ClCompile Include="..\..\ghttp\ghttpProcess.c" />
-    <ClCompile Include="..\..\GP\gp.c" />
-    <ClCompile Include="..\..\GP\gpi.c" />
-    <ClCompile Include="..\..\GP\gpiBuddy.c" />
-    <ClCompile Include="..\..\GP\gpiBuffer.c" />
-    <ClCompile Include="..\..\GP\gpiCallback.c" />
-    <ClCompile Include="..\..\GP\gpiConnect.c" />
-    <ClCompile Include="..\..\GP\gpiInfo.c" />
-    <ClCompile Include="..\..\GP\gpiKeys.c" />
-    <ClCompile Include="..\..\GP\gpiOperation.c" />
-    <ClCompile Include="..\..\GP\gpiPeer.c" />
-    <ClCompile Include="..\..\GP\gpiProfile.c" />
-    <ClCompile Include="..\..\GP\gpiSearch.c" />
-    <ClCompile Include="..\..\GP\gpiTransfer.c" />
-    <ClCompile Include="..\..\GP\gpiUnique.c" />
-    <ClCompile Include="..\..\GP\gpiUtility.c" />
-    <ClCompile Include="..\..\gt2\gt2Auth.c" />
-    <ClCompile Include="..\..\gt2\gt2Buffer.c" />
-    <ClCompile Include="..\..\gt2\gt2Callback.c" />
-    <ClCompile Include="..\..\gt2\gt2Connection.c" />
-    <ClCompile Include="..\..\gt2\gt2Encode.c" />
-    <ClCompile Include="..\..\gt2\gt2Filter.c" />
-    <ClCompile Include="..\..\gt2\gt2Main.c" />
-    <ClCompile Include="..\..\gt2\gt2Message.c" />
-    <ClCompile Include="..\..\gt2\gt2Socket.c" />
-    <ClCompile Include="..\..\gt2\gt2Utility.c" />
-    <ClCompile Include="..\..\hashtable.c" />
-    <ClCompile Include="..\..\md5c.c" />
-    <ClCompile Include="..\sakeMain.c" />
-    <ClCompile Include="..\sakeRequest.c" />
-    <ClCompile Include="..\sakeRequestMisc.c" />
-    <ClCompile Include="..\sakeRequestModify.c" />
-    <ClCompile Include="..\sakeRequestRead.c" />
-    <ClCompile Include="saketest.c" />
+    <ClCompile Include="..\saketest.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\common\gsAssert.h" />
-    <ClInclude Include="..\..\common\gsAvailable.h" />
-    <ClInclude Include="..\..\common\gsCommon.h" />
-    <ClInclude Include="..\..\common\gsCore.h" />
-    <ClInclude Include="..\..\common\gsCrypt.h" />
-    <ClInclude Include="..\..\common\gsDebug.h" />
-    <ClInclude Include="..\..\common\gsLargeInt.h" />
-    <ClInclude Include="..\..\common\gsMemory.h" />
-    <ClInclude Include="..\..\common\gsPlatform.h" />
-    <ClInclude Include="..\..\common\gsPlatformSocket.h" />
-    <ClInclude Include="..\..\common\gsPlatformThread.h" />
-    <ClInclude Include="..\..\common\gsPlatformUtil.h" />
-    <ClInclude Include="..\..\common\gsRC4.h" />
-    <ClInclude Include="..\..\common\gsSHA1.h" />
-    <ClInclude Include="..\..\common\gsSoap.h" />
-    <ClInclude Include="..\..\common\gsSSL.h" />
-    <ClInclude Include="..\..\common\gsStringUtil.h" />
-    <ClInclude Include="..\..\common\gsUdpEngine.h" />
-    <ClInclude Include="..\..\common\gsXML.h" />
-    <ClInclude Include="..\..\darray.h" />
-    <ClInclude Include="..\..\ghttp\ghttp.h" />
-    <ClInclude Include="..\..\ghttp\ghttpASCII.h" />
-    <ClInclude Include="..\..\ghttp\ghttpBuffer.h" />
-    <ClInclude Include="..\..\ghttp\ghttpCallbacks.h" />
-    <ClInclude Include="..\..\ghttp\ghttpCommon.h" />
-    <ClInclude Include="..\..\ghttp\ghttpConnection.h" />
-    <ClInclude Include="..\..\ghttp\ghttpEncryption.h" />
-    <ClInclude Include="..\..\ghttp\ghttpMain.h" />
-    <ClInclude Include="..\..\ghttp\ghttpPost.h" />
-    <ClInclude Include="..\..\ghttp\ghttpProcess.h" />
-    <ClInclude Include="..\..\GP\gp.h" />
-    <ClInclude Include="..\..\GP\gpi.h" />
-    <ClInclude Include="..\..\GP\gpiBuddy.h" />
-    <ClInclude Include="..\..\GP\gpiBuffer.h" />
-    <ClInclude Include="..\..\GP\gpiCallback.h" />
-    <ClInclude Include="..\..\GP\gpiConnect.h" />
-    <ClInclude Include="..\..\GP\gpiInfo.h" />
-    <ClInclude Include="..\..\GP\gpiKeys.h" />
-    <ClInclude Include="..\..\GP\gpiOperation.h" />
-    <ClInclude Include="..\..\GP\gpiPeer.h" />
-    <ClInclude Include="..\..\GP\gpiProfile.h" />
-    <ClInclude Include="..\..\GP\gpiSearch.h" />
-    <ClInclude Include="..\..\GP\gpiTransfer.h" />
-    <ClInclude Include="..\..\GP\gpiUnique.h" />
-    <ClInclude Include="..\..\GP\gpiUtility.h" />
-    <ClInclude Include="..\..\gt2\gt2.h" />
-    <ClInclude Include="..\..\gt2\gt2Auth.h" />
-    <ClInclude Include="..\..\gt2\gt2Buffer.h" />
-    <ClInclude Include="..\..\gt2\gt2Callback.h" />
-    <ClInclude Include="..\..\gt2\gt2Connection.h" />
-    <ClInclude Include="..\..\gt2\gt2Encode.h" />
-    <ClInclude Include="..\..\gt2\gt2Filter.h" />
-    <ClInclude Include="..\..\gt2\gt2Main.h" />
-    <ClInclude Include="..\..\gt2\gt2Message.h" />
-    <ClInclude Include="..\..\gt2\gt2Socket.h" />
-    <ClInclude Include="..\..\gt2\gt2Utility.h" />
-    <ClInclude Include="..\..\hashtable.h" />
-    <ClInclude Include="..\..\md5.h" />
-    <ClInclude Include="..\sake.h" />
-    <ClInclude Include="..\sakeMain.h" />
-    <ClInclude Include="..\sakeRequest.h" />
-    <ClInclude Include="..\sakeRequestInternal.h" />
+    <ProjectReference Include="..\..\..\_win32_visualstudio\common.vcxproj">
+      <Project>{75d6c79f-699b-4c66-adc8-818e77295a08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\ghttp.vcxproj">
+      <Project>{1ebcea7a-712c-495c-aa4d-d3fda7d8685a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\GP.vcxproj">
+      <Project>{7a206b2f-f1d6-4c27-a8eb-13c9ee8b4cab}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\gt2.vcxproj">
+      <Project>{2edaae43-f747-4d0a-946e-f4d0f2491081}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\sake.vcxproj">
+      <Project>{8e65be16-c1e6-4b71-a1f3-1cdd78a39b34}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

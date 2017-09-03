@@ -157,60 +157,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\common\gsAssert.c" />
-    <ClCompile Include="..\..\common\gsAvailable.c" />
-    <ClCompile Include="..\..\common\gsDebug.c" />
-    <ClCompile Include="..\..\common\gsMemory.c" />
-    <ClCompile Include="..\..\common\gsPlatform.c" />
-    <ClCompile Include="..\..\common\gsPlatformSocket.c" />
-    <ClCompile Include="..\..\common\gsPlatformThread.c" />
-    <ClCompile Include="..\..\common\gsPlatformUtil.c" />
-    <ClCompile Include="..\..\common\gsStringUtil.c" />
-    <ClCompile Include="..\..\common\gsUdpEngine.c" />
-    <ClCompile Include="..\..\darray.c" />
-    <ClCompile Include="..\..\GP\gp.c" />
-    <ClCompile Include="..\..\GP\gpi.c" />
-    <ClCompile Include="..\..\GP\gpiBuddy.c" />
-    <ClCompile Include="..\..\GP\gpiBuffer.c" />
-    <ClCompile Include="..\..\GP\gpiCallback.c" />
-    <ClCompile Include="..\..\GP\gpiConnect.c" />
-    <ClCompile Include="..\..\GP\gpiInfo.c" />
-    <ClCompile Include="..\..\GP\gpiKeys.c" />
-    <ClCompile Include="..\..\GP\gpiOperation.c" />
-    <ClCompile Include="..\..\GP\gpiPeer.c" />
-    <ClCompile Include="..\..\GP\gpiProfile.c" />
-    <ClCompile Include="..\..\GP\gpiSearch.c" />
-    <ClCompile Include="..\..\GP\gpiTransfer.c" />
-    <ClCompile Include="..\..\GP\gpiUnique.c" />
-    <ClCompile Include="..\..\GP\gpiUtility.c" />
-    <ClCompile Include="..\..\gt2\gt2Auth.c" />
-    <ClCompile Include="..\..\gt2\gt2Buffer.c" />
-    <ClCompile Include="..\..\gt2\gt2Callback.c" />
-    <ClCompile Include="..\..\gt2\gt2Connection.c" />
-    <ClCompile Include="..\..\gt2\gt2Encode.c" />
-    <ClCompile Include="..\..\gt2\gt2Filter.c" />
-    <ClCompile Include="..\..\gt2\gt2Main.c" />
-    <ClCompile Include="..\..\gt2\gt2Message.c" />
-    <ClCompile Include="..\..\gt2\gt2Socket.c" />
-    <ClCompile Include="..\..\gt2\gt2Utility.c" />
-    <ClCompile Include="..\..\hashtable.c" />
-    <ClCompile Include="..\..\md5c.c" />
-    <ClCompile Include="..\..\natneg\NATify.c" />
-    <ClCompile Include="..\..\natneg\natneg.c" />
-    <ClCompile Include="..\gvCodec.c" />
-    <ClCompile Include="..\gvCustomDevice.c" />
-    <ClCompile Include="..\gvDevice.c" />
-    <ClCompile Include="..\gvDirectSound.c">
-      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level3</WarningLevel>
-      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</TreatWarningAsError>
-      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level3</WarningLevel>
-      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</TreatWarningAsError>
-    </ClCompile>
-    <ClCompile Include="..\gvFrame.c" />
-    <ClCompile Include="..\gvMain.c" />
-    <ClCompile Include="..\gvSource.c" />
-    <ClCompile Include="..\gvSpeex.c" />
-    <ClCompile Include="..\gvUtil.c" />
     <ClCompile Include="LoginDlg.cpp" />
     <ClCompile Include="SetupDlg.cpp" />
     <ClCompile Include="StdAfx.cpp" />
@@ -222,59 +168,6 @@
     <ResourceCompile Include="Voice2BuddyMFC.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\common\gsAssert.h" />
-    <ClInclude Include="..\..\common\gsAvailable.h" />
-    <ClInclude Include="..\..\common\gsCommon.h" />
-    <ClInclude Include="..\..\common\gsDebug.h" />
-    <ClInclude Include="..\..\common\gsMemory.h" />
-    <ClInclude Include="..\..\common\gsPlatform.h" />
-    <ClInclude Include="..\..\common\gsPlatformSocket.h" />
-    <ClInclude Include="..\..\common\gsPlatformThread.h" />
-    <ClInclude Include="..\..\common\gsPlatformUtil.h" />
-    <ClInclude Include="..\..\common\gsStringUtil.h" />
-    <ClInclude Include="..\..\common\gsUdpEngine.h" />
-    <ClInclude Include="..\..\darray.h" />
-    <ClInclude Include="..\..\GP\gp.h" />
-    <ClInclude Include="..\..\GP\gpi.h" />
-    <ClInclude Include="..\..\GP\gpiBuddy.h" />
-    <ClInclude Include="..\..\GP\gpiBuffer.h" />
-    <ClInclude Include="..\..\GP\gpiCallback.h" />
-    <ClInclude Include="..\..\GP\gpiConnect.h" />
-    <ClInclude Include="..\..\GP\gpiInfo.h" />
-    <ClInclude Include="..\..\GP\gpiKeys.h" />
-    <ClInclude Include="..\..\GP\gpiOperation.h" />
-    <ClInclude Include="..\..\GP\gpiPeer.h" />
-    <ClInclude Include="..\..\GP\gpiProfile.h" />
-    <ClInclude Include="..\..\GP\gpiSearch.h" />
-    <ClInclude Include="..\..\GP\gpiTransfer.h" />
-    <ClInclude Include="..\..\GP\gpiUnique.h" />
-    <ClInclude Include="..\..\GP\gpiUtility.h" />
-    <ClInclude Include="..\..\gt2\gt2.h" />
-    <ClInclude Include="..\..\gt2\gt2Auth.h" />
-    <ClInclude Include="..\..\gt2\gt2Buffer.h" />
-    <ClInclude Include="..\..\gt2\gt2Callback.h" />
-    <ClInclude Include="..\..\gt2\gt2Connection.h" />
-    <ClInclude Include="..\..\gt2\gt2Encode.h" />
-    <ClInclude Include="..\..\gt2\gt2Filter.h" />
-    <ClInclude Include="..\..\gt2\gt2Main.h" />
-    <ClInclude Include="..\..\gt2\gt2Message.h" />
-    <ClInclude Include="..\..\gt2\gt2Socket.h" />
-    <ClInclude Include="..\..\gt2\gt2Utility.h" />
-    <ClInclude Include="..\..\hashtable.h" />
-    <ClInclude Include="..\..\md5.h" />
-    <ClInclude Include="..\..\natneg\NATify.h" />
-    <ClInclude Include="..\..\natneg\natneg.h" />
-    <ClInclude Include="..\..\natneg\nninternal.h" />
-    <ClInclude Include="..\gv.h" />
-    <ClInclude Include="..\gvCodec.h" />
-    <ClInclude Include="..\gvCustomDevice.h" />
-    <ClInclude Include="..\gvDevice.h" />
-    <ClInclude Include="..\gvDirectSound.h" />
-    <ClInclude Include="..\gvFrame.h" />
-    <ClInclude Include="..\gvMain.h" />
-    <ClInclude Include="..\gvSource.h" />
-    <ClInclude Include="..\gvSpeex.h" />
-    <ClInclude Include="..\gvUtil.h" />
     <ClInclude Include="LoginDlg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SetupDlg.h" />
@@ -296,9 +189,23 @@
     <CustomBuild Include="res\Voice2BuddyMFC.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libspeex\libspeex.vcxproj">
-      <Project>{1342dd90-6ae3-45be-b6c4-161639f35d04}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    <ProjectReference Include="..\..\Voice2\libspeex\win32\VS2017\libspeex\libspeex.vcxproj">
+      <Project>{e972c52f-9e85-4d65-b19c-031e511e9db4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_win32_visualstudio\common.vcxproj">
+      <Project>{75d6c79f-699b-4c66-adc8-818e77295a08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_win32_visualstudio\GP.vcxproj">
+      <Project>{7a206b2f-f1d6-4c27-a8eb-13c9ee8b4cab}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_win32_visualstudio\gt2.vcxproj">
+      <Project>{2edaae43-f747-4d0a-946e-f4d0f2491081}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_win32_visualstudio\natneg.vcxproj">
+      <Project>{6b2b0d24-56ea-4168-b8cf-7db1a2829a6e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_win32_visualstudio\Voice2.vcxproj">
+      <Project>{71a7407e-5775-4964-9d12-9bbb56bf5dea}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

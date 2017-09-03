@@ -261,66 +261,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\common\gsAssert.c" />
-    <ClCompile Include="..\..\common\gsAvailable.c" />
-    <ClCompile Include="..\..\common\gsCrypt.c" />
-    <ClCompile Include="..\..\common\gsDebug.c" />
-    <ClCompile Include="..\..\common\gsLargeInt.c" />
-    <ClCompile Include="..\..\common\gsMemory.c" />
-    <ClCompile Include="..\..\common\gsPlatform.c" />
-    <ClCompile Include="..\..\common\gsPlatformSocket.c" />
-    <ClCompile Include="..\..\common\gsPlatformThread.c" />
-    <ClCompile Include="..\..\common\gsPlatformUtil.c" />
-    <ClCompile Include="..\..\common\gsRC4.c" />
-    <ClCompile Include="..\..\common\gsSHA1.c" />
-    <ClCompile Include="..\..\common\gsSSL.c" />
-    <ClCompile Include="..\..\common\gsStringUtil.c" />
-    <ClCompile Include="..\..\common\gsXML.c" />
-    <ClCompile Include="..\..\common\win32\Win32Common.c" />
-    <ClCompile Include="..\..\darray.c" />
-    <ClCompile Include="..\..\ghttp\ghttpBuffer.c" />
-    <ClCompile Include="..\..\ghttp\ghttpCallbacks.c" />
-    <ClCompile Include="..\..\ghttp\ghttpCommon.c" />
-    <ClCompile Include="..\..\ghttp\ghttpConnection.c" />
-    <ClCompile Include="..\..\ghttp\ghttpEncryption.c" />
-    <ClCompile Include="..\..\ghttp\ghttpMain.c" />
-    <ClCompile Include="..\..\ghttp\ghttpPost.c" />
-    <ClCompile Include="..\..\ghttp\ghttpProcess.c" />
-    <ClCompile Include="..\..\hashtable.c" />
-    <ClCompile Include="..\..\md5c.c" />
-    <ClCompile Include="..\ptMain.c" />
-    <ClCompile Include="pttestc.c" />
+    <ClCompile Include="..\pttestc.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\common\gsAssert.h" />
-    <ClInclude Include="..\..\common\gsAvailable.h" />
-    <ClInclude Include="..\..\common\gsCommon.h" />
-    <ClInclude Include="..\..\common\gsCrypt.h" />
-    <ClInclude Include="..\..\common\gsDebug.h" />
-    <ClInclude Include="..\..\common\gsLargeInt.h" />
-    <ClInclude Include="..\..\common\gsMemory.h" />
-    <ClInclude Include="..\..\common\gsPlatform.h" />
-    <ClInclude Include="..\..\common\gsPlatformSocket.h" />
-    <ClInclude Include="..\..\common\gsPlatformThread.h" />
-    <ClInclude Include="..\..\common\gsPlatformUtil.h" />
-    <ClInclude Include="..\..\common\gsRC4.h" />
-    <ClInclude Include="..\..\common\gsSHA1.h" />
-    <ClInclude Include="..\..\common\gsSSL.h" />
-    <ClInclude Include="..\..\common\gsStringUtil.h" />
-    <ClInclude Include="..\..\common\gsXML.h" />
-    <ClInclude Include="..\..\darray.h" />
-    <ClInclude Include="..\..\ghttp\ghttp.h" />
-    <ClInclude Include="..\..\ghttp\ghttpASCII.h" />
-    <ClInclude Include="..\..\ghttp\ghttpBuffer.h" />
-    <ClInclude Include="..\..\ghttp\ghttpCallbacks.h" />
-    <ClInclude Include="..\..\ghttp\ghttpCommon.h" />
-    <ClInclude Include="..\..\ghttp\ghttpConnection.h" />
-    <ClInclude Include="..\..\ghttp\ghttpEncryption.h" />
-    <ClInclude Include="..\..\ghttp\ghttpMain.h" />
-    <ClInclude Include="..\..\ghttp\ghttpPost.h" />
-    <ClInclude Include="..\..\ghttp\ghttpProcess.h" />
-    <ClInclude Include="..\..\md5.h" />
-    <ClInclude Include="..\pt.h" />
+    <ProjectReference Include="..\..\..\_win32_visualstudio\common.vcxproj">
+      <Project>{75d6c79f-699b-4c66-adc8-818e77295a08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\ghttp.vcxproj">
+      <Project>{1ebcea7a-712c-495c-aa4d-d3fda7d8685a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\pt.vcxproj">
+      <Project>{f6c0d393-fa4a-47cc-8a75-986d041b131d}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

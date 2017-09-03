@@ -270,61 +270,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\common\gsAssert.c" />
-    <ClCompile Include="..\..\common\gsDebug.c" />
-    <ClCompile Include="..\..\common\gsMemory.c" />
-    <ClCompile Include="..\..\common\gsPlatform.c" />
-    <ClCompile Include="..\..\common\gsPlatformSocket.c" />
-    <ClCompile Include="..\..\common\gsPlatformThread.c" />
-    <ClCompile Include="..\..\common\gsPlatformUtil.c" />
-    <ClCompile Include="..\..\common\win32\Win32Common.c" />
-    <ClCompile Include="..\..\darray.c" />
-    <ClCompile Include="..\gvCodec.c" />
-    <ClCompile Include="..\gvCustomDevice.c" />
-    <ClCompile Include="..\gvDevice.c" />
-    <ClCompile Include="..\gvDirectSound.c">
-      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level3</WarningLevel>
-      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</TreatWarningAsError>
-      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level3</WarningLevel>
-      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</TreatWarningAsError>
-      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release Unicode|Win32'">Level3</WarningLevel>
-      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release Unicode|Win32'">false</TreatWarningAsError>
-      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug Unicode|Win32'">Level3</WarningLevel>
-      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug Unicode|Win32'">false</TreatWarningAsError>
-    </ClCompile>
-    <ClCompile Include="..\gvFrame.c" />
-    <ClCompile Include="..\gvMain.c" />
-    <ClCompile Include="..\gvSource.c" />
-    <ClCompile Include="..\gvSpeex.c" />
-    <ClCompile Include="..\gvUtil.c" />
-    <ClCompile Include="Voice2Test.c" />
+    <ClCompile Include="..\Voice2Test.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\common\gsAssert.h" />
-    <ClInclude Include="..\..\common\gsCommon.h" />
-    <ClInclude Include="..\..\common\gsDebug.h" />
-    <ClInclude Include="..\..\common\gsMemory.h" />
-    <ClInclude Include="..\..\common\gsPlatform.h" />
-    <ClInclude Include="..\..\common\gsPlatformSocket.h" />
-    <ClInclude Include="..\..\common\gsPlatformThread.h" />
-    <ClInclude Include="..\..\common\gsPlatformUtil.h" />
-    <ClInclude Include="..\..\common\gsStringUtil.h" />
-    <ClInclude Include="..\..\darray.h" />
-    <ClInclude Include="..\gv.h" />
-    <ClInclude Include="..\gvCodec.h" />
-    <ClInclude Include="..\gvCustomDevice.h" />
-    <ClInclude Include="..\gvDevice.h" />
-    <ClInclude Include="..\gvDirectSound.h" />
-    <ClInclude Include="..\gvFrame.h" />
-    <ClInclude Include="..\gvMain.h" />
-    <ClInclude Include="..\gvSource.h" />
-    <ClInclude Include="..\gvSpeex.h" />
-    <ClInclude Include="..\gvUtil.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\libspeex\libspeex.vcxproj">
-      <Project>{1342dd90-6ae3-45be-b6c4-161639f35d04}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    <ProjectReference Include="..\..\..\Voice2\libspeex\win32\VS2017\libspeex\libspeex.vcxproj">
+      <Project>{e972c52f-9e85-4d65-b19c-031e511e9db4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\common.vcxproj">
+      <Project>{75d6c79f-699b-4c66-adc8-818e77295a08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_win32_visualstudio\Voice2.vcxproj">
+      <Project>{71a7407e-5775-4964-9d12-9bbb56bf5dea}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
