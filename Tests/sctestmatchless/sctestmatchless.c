@@ -8,6 +8,8 @@
 
 #include <float.h>
 
+#pragma comment(lib, "wsock32.lib")
+
 #ifdef UNDER_CE
 	void RetailOutputA(CHAR *tszErr, ...);
 	#define printf RetailOutputA

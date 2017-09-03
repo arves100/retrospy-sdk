@@ -29,7 +29,7 @@ the networking of the Query & Reporting 2 SDK and CDKey SDKs are available.
 If you intend to use the integration option for these SDKs, you must uncomment the 
 define below, or provide it as an option to your compiler.
 *******/
-#define QR2CDKEY_INTEGRATION
+//#define QR2CDKEY_INTEGRATION
 
 typedef void (*AuthCallBackFn)(int gameid, int localid, int authenticated, char *errmsg, void *instance);
 typedef void (*RefreshAuthCallBackFn)(int gameid, int localid, int hint, char *challenge, void *instance);
@@ -57,10 +57,8 @@ can pass the specific instance information in via the "qrec" argument. Otherwise
 you can simply pass in NULL.
 *********/
 #ifdef QR2CDKEY_INTEGRATION
-
 #include "../qr2/qr2.h"
 int gcd_init_qr2(qr2_t qrec, int gameid);
-
 #endif
 
 /********

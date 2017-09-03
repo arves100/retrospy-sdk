@@ -15,13 +15,15 @@ devsupport@gamespy.com
 		information
 		
 ******/
-#include "gcdkeys.h"
-#include "gcdkeyc.h"
+
+#include "../gcdkey/gcdkeys.h"
+#include "../gcdkey/gcdkeyc.h"
 #include "../common/gsAvailable.h"
 #ifdef _WIN32
 #include <conio.h>
 #endif
 
+#pragma comment(lib, "wsock32.lib")
 
 #define GAME_NAME       "gmtest"
 #define GAMEID	        0

@@ -4,9 +4,11 @@
 #include "../../common/gsCore.h"
 #include "../../common/gsAvailable.h"
 #include "../../webservices/AuthService.h"
-#include "../sc.h"
+#include "../../sc/sc.h"
 
 #include <float.h>
+
+#pragma comment(lib, "wsock32.lib")
 
 #ifdef UNDER_CE
 	void RetailOutputA(CHAR *tszErr, ...);

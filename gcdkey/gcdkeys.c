@@ -132,10 +132,10 @@ VARS
 static SOCKET sock = INVALID_SOCKET;
 static unsigned short localport = 0;
 static char enc[9]; /* used for xor encoding */
-static struct sockaddr_in valaddr;
 
 static int numproducts = 0;
 gsproduct_t products[MAX_PRODUCTS];
+static struct sockaddr_in valaddr;
 
 /****************************************************************************/
 /* PUBLIC FUNCTIONS */
@@ -168,34 +168,6 @@ int gcd_init(int gameid)
 	return gcd_init_common(gameid);
 
 }
-
-
-#ifdef QR2CDKEY_INTEGRATION
-extern struct qr2_implementation_s static_qr2_rec;
-int gcd_init_qr2(qr2_t qrec, int gameid)
-{
-	// check if the backend is available
-	if(__GSIACResult != GSIACAvailable)
-		return -1;
-
-	if (qrec == NULL)
-		qrec = &static_qr2_rec;
-
-	localport = (unsigned short)-1; /* we don't process any incoming data ourselves - it gets passed from the QR SDK */
-
-	sock = qrec->hbsock; 
-	qrec->cdkeyprocess = cdkey_process_buf;
-	/* grab the outgoing address from the QR SDK */
-	memset(&valaddr,0,sizeof(struct sockaddr_in));
-	valaddr.sin_family = AF_INET;
-	valaddr.sin_port = htons((unsigned short)VAL_PORT);
-	valaddr.sin_addr.s_addr = qrec->hbaddr.sin_addr.s_addr;
-	return gcd_init_common(gameid);
-	
-}
-
-#endif
-
 
 void gcd_shutdown(void)
 {
@@ -954,6 +926,30 @@ static gsnode_t *remove_from_queue(gsnode_t *t, gsnode_t *que)
                 t->next->prev = t->prev;
 
         return(t);
+}
+
+#include "..\qr2\qr2.h"
+extern struct qr2_implementation_s static_qr2_rec;
+int gcd_init_qr2(qr2_t qrec, int gameid)
+{
+	// check if the backend is available
+	if (__GSIACResult != GSIACAvailable)
+		return -1;
+
+	if (qrec == NULL)
+		qrec = &static_qr2_rec;
+
+	localport = (unsigned short)-1; /* we don't process any incoming data ourselves - it gets passed from the QR SDK */
+
+	sock = qrec->hbsock;
+	qrec->cdkeyprocess = cdkey_process_buf;
+	/* grab the outgoing address from the QR SDK */
+	memset(&valaddr, 0, sizeof(struct sockaddr_in));
+	valaddr.sin_family = AF_INET;
+	valaddr.sin_port = htons((unsigned short)VAL_PORT);
+	valaddr.sin_addr.s_addr = qrec->hbaddr.sin_addr.s_addr;
+	return gcd_init_common(gameid);
+
 }
 
 #ifdef __cplusplus

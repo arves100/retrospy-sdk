@@ -14,13 +14,14 @@ devsupport@gamespy.com
 ******/
 
 
-#include "gcdkeys.h"
+#include "../gcdkey/gcdkeys.h"
 #include "../common/gsCommon.h"
 #include "../common/gsAvailable.h"
 #ifdef _WIN32
 	#include <conio.h>
 #endif
- 
+
+#pragma comment(lib, "wsock32.lib")
 
 #define MAXCLIENTS 64
 #define MY_GAMEID 0		// This is assigned by GameSpy
