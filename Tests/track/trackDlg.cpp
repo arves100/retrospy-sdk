@@ -5,7 +5,7 @@
 #include "track.h"
 #include "trackDlg.h"
 
-#include "../gstats.h"
+#include "../../gstats/gstats.h"
 #include "../../common/gsAvailable.h"
 #include "../../ghttp/ghttp.h"
 

@@ -15,8 +15,10 @@ simulating a game "host".
 
 ******/
 #include <stdarg.h>
-#include "../gstats.h"
+#include "../../gstats/gstats.h"
 #include "../../common/gsAvailable.h"
+
+#pragma comment(lib, "wsock32.lib")
 
 #ifdef UNDER_CE
 	void RetailOutputA(CHAR *tszErr, ...);
