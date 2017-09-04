@@ -57,7 +57,7 @@ void gcd_compute_response(char *cdkey, char *challenge, char response[RESPONSE_S
 	/* do the cd key md5 */
 	MD5Digest((unsigned char *)cdkey, strlen(cdkey), response);
 	/* add the random value */
-	strcpy_s(&response[32], _countof(response), randstr);
+	strcpy_s(&response[32], 32, randstr);
 	/* do the response md5 */
 	MD5Digest((unsigned char *)rawout, strlen(rawout), &response[40]);	
 }
