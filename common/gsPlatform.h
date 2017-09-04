@@ -487,9 +487,9 @@ extern gsi_u64 gsiByteOrderSwap64(gsi_u64);
 #define wcscpy_s(dest, destsize, src) wcscpy(dest, src)
 #define strcpy_s(dest, destsize, src) strcpy(dest, src)
 #define sscanf_s sscanf
-
-// Conversions from Windows CRT _s functions to Standard CRT functions
-extern int sprintf_s(char* const _Buffer, const size_t BufferCount, const char* Format, ...);
+#define sprintf_s(_Buffer, BufferSize,Format,...) sprintf(_Buffer,Format,__VA_ARGS__)
+#define _snprintf_s(_Buffer, _BufferSize, BufferCount, Format,...) snprintf(_Buffer, BufferCount, Format, __VA_ARGS__)
+#define strcat_s(dest,destsize,src) strcat(dest,src)
 #else
 // Conversions from Standard CRT functions to Windows CRT _s functons
 extern struct tm* gmtime_secure(const time_t* t);
@@ -500,6 +500,7 @@ extern char* ctime_secure(const time_t* t);
 #define gmtime gmtime_secure
 #define fopen fopen_secure
 #define ctime ctime_secure
+
 #endif
 
 // Fix for Compilers that dosen't have countof

@@ -37,7 +37,7 @@ void gcd_compute_response(char *cdkey, char *challenge, char response[RESPONSE_S
 	/* check to make sure we weren't passed a huge cd key/challenge */
 	if (strlen(cdkey) * 2 + strlen(challenge) + 8 >= RAWSIZE)
 	{
-		strcpy(response,"CD Key or challenge too long");
+		strcpy_s(response,_countof(response), "CD Key or challenge too long");
 		return;
 	}
 
@@ -45,19 +45,19 @@ void gcd_compute_response(char *cdkey, char *challenge, char response[RESPONSE_S
 	srand((unsigned int)time(NULL) ^ 0x33333333);
 	/* Since RAND_MAX is 16 bit on many systems, make sure we get a 32 bit number */
 	anyrandom = (rand() << 16 | rand()); 
-	sprintf(randstr,"%.8x",anyrandom);
+	sprintf_s(randstr,_countof(randstr),"%.8x",anyrandom);
 
 	/* auth response   = MD5(cdkey + random mod 0xffff + challenge) */
 	/* reauth response = MD5(challenge + random mode 0xffff + cdkey) */ 
 	if (method == 0)
-		sprintf(rawout, "%s%d%s",cdkey, anyrandom % 0xFFFF , challenge );
+		sprintf_s(rawout, _countof(rawout), "%s%d%s",cdkey, anyrandom % 0xFFFF , challenge );
 	else
-		sprintf(rawout, "%s%d%s",challenge, anyrandom % 0xFFFF, cdkey);
+		sprintf_s(rawout, _countof(rawout), "%s%d%s",challenge, anyrandom % 0xFFFF, cdkey);
 
 	/* do the cd key md5 */
 	MD5Digest((unsigned char *)cdkey, strlen(cdkey), response);
 	/* add the random value */
-	strcpy(&response[32], randstr);
+	strcpy_s(&response[32], _countof(response), randstr);
 	/* do the response md5 */
 	MD5Digest((unsigned char *)rawout, strlen(rawout), &response[40]);	
 }
