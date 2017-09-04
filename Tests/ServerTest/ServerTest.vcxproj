@@ -113,6 +113,12 @@
     <ProjectReference Include="..\..\_win32_visualstudio\gcdkey.vcxproj">
       <Project>{b84041e6-dae0-4458-a222-7f1a76c8c8ba}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\_win32_visualstudio\natneg.vcxproj">
+      <Project>{6b2b0d24-56ea-4168-b8cf-7db1a2829a6e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_win32_visualstudio\qr2.vcxproj">
+      <Project>{54de3e69-59e0-4ab1-a687-76fa97616be1}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
