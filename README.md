@@ -10,15 +10,15 @@ Windows: Currently all the projects are compiled with Visual Studio 2017 (v141_x
 
 MacOSX: None yet
 
-Linux: Linux tests will start after i've successfully compiled all the project om Windows
+Linux: Linux tests will start after i've successfully compiled all the project on Windows
 
 Nitro: It's missing NitroWifi.h. If you find that, please contact me.
 
-Revolution: I will be started after i finish Linux projects
+Revolution: I will start it after i finish Linux projects
 
 PS3: None yet
 
-PS2: None yet
+PS2: I will start it after i finish Linux projects
 
 PSP: None yet
 
@@ -36,7 +36,9 @@ I'd like to have full Platforms and Compilers supported for this project.
 Notes
 ===
 
-Brigates SDK won't compile because are missing some headers from common.
+- Brigates SDK won't compile because are missing some headers from common.
 
-NitroWifi should be a package included with Nintendo DS SDK, this header is responsable for socket implementation and pretty much all the test in DS Networking. Because some Dev Units were made without Wifi, i guess Nintendo added Wifi connectivity later to the DS. That could be the reason why it's a separate package.
+- NitroWifi should be a package included with Nintendo DS SDK, this header is responsable for socket implementation and pretty much all the test in DS Networking. Because some Dev Units were made without Wifi, i guess Nintendo added Wifi connectivity later to the DS. That could be the reason why it's a separate package.
+
+- I've made a commit that aim to fix CRT_SECURE deprecation for MSVC >= 1300. It needs testing that i can't directly do. I will try to move it to another branch later. See commit 69f488153d149a545324bc4360010ed072391531 and 25cb19f3bb4d890ea8f7826c550a514e6b64e7eb.
 
