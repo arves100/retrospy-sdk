@@ -26,6 +26,19 @@ XBox: None yet
 
 XBox360: None yet
 
+What needs to be Done
+===
+
+- Fix for Brigades SDK.
+
+- Moving to OpenSSL or upgrade GameSpy HTTP Core to support all SSL\TLS Algorithm. (Even if this it's a "new feature" i think for modern using of this SDK it must be compatible with lateset SSL revesion)
+
+- Fixing all warning in all platform
+
+- [Server](https://github.com/arves100/retrospy-server)
+
+- Testing,Testing, Testing
+
 Contribution
 ===
 
