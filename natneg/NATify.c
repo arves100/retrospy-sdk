@@ -30,13 +30,15 @@ const char * AddressToString(unsigned int ip, unsigned short port, char string[2
 
 		inAddr.s_addr = ip;
 
+		char* inetIP = inet_ntoa(inAddr);
+
 		if(port)
-			sprintf(strAddress, "%s:%d", inet_ntoa(inAddr), port);
+			sprintf_s(strAddress, strlen(inetIP) + sizeof(port) + 1 , "%s:%d", inetIP, port);
 		else
-			sprintf(strAddress, "%s", inet_ntoa(inAddr));
+			sprintf_s(strAddress, strlen(inetIP) + 1, "%s", inetIP);
 	}
 	else if(port)
-		sprintf(strAddress, ":%d", port);
+		sprintf_s(strAddress, sizeof(port) + 1, ":%d", port);
 	else
 		strAddress[0] = '\0';
 

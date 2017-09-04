@@ -231,7 +231,7 @@ static void SendInitPackets(NATNegotiator neg)
 	buffer[INITPACKET_ADDRESS_OFFSET+4] = 0;
 	buffer[INITPACKET_ADDRESS_OFFSET+5] = 0;
 	// add the gamename to all requests
-	strcpy(buffer + INITPACKET_SIZE, __GSIACGamename);
+	strcpy_s(buffer + INITPACKET_SIZE,_countof(buffer) + INITPACKET_SIZE, __GSIACGamename); // Please test
 	packetlen = (INITPACKET_SIZE + (int)strlen(__GSIACGamename) + 1);
 	if (p->Packet.Init.usegameport && !neg->initAckRecv[NN_PT_GP])
 	{
@@ -368,7 +368,7 @@ static unsigned int ResolveServer(const char * overrideHostname, const char * de
 
 	if(overrideHostname == NULL)
 	{
-		snprintf(hostnameBuffer, sizeof(hostnameBuffer), "%s.%s", __GSIACGamename, defaultHostname);
+		_snprintf_s(hostnameBuffer,_countof(hostnameBuffer), sizeof(hostnameBuffer), "%s.%s", __GSIACGamename, defaultHostname);
 		hostname = hostnameBuffer;
 	}
 	else
