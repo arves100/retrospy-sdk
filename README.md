@@ -39,6 +39,8 @@ What needs to be Done
 
 - Testing,Testing, Testing
 
+- Switch to CMake with Cross-Compiling
+
 Contribution
 ===
 
