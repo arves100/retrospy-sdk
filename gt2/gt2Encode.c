@@ -434,7 +434,7 @@ static int gtiEncodeSingle(char elemType, char *outBuffer, int outLength, va_lis
 			len = (int)strlen(s) + 1;
 			if (outLength < len )
 				return -1;
-			strcpy(outBuffer, s);
+			strcpy_s(outBuffer,len, s);
 			return len;
 		}
 		//break;

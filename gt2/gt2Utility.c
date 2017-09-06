@@ -69,12 +69,12 @@ const char * gt2AddressToString(unsigned int ip, unsigned short port, char strin
 		inAddr.s_addr = ip;
 
 		if(port)
-			sprintf(strAddress, "%s:%d", inet_ntoa(inAddr), port);
+			sprintf_s(strAddress, strlen(strAddress)+1, "%s:%d", inet_ntoa(inAddr), port);
 		else
-			sprintf(strAddress, "%s", inet_ntoa(inAddr));
+			sprintf_s(strAddress, strlen(strAddress)+1, "%s", inet_ntoa(inAddr));
 	}
 	else if(port)
-		sprintf(strAddress, ":%d", port);
+		sprintf_s(strAddress, strlen(strAddress)+1, ":%d", port);
 	else
 		strAddress[0] = '\0';
 

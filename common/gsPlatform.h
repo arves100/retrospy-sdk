@@ -490,6 +490,14 @@ extern gsi_u64 gsiByteOrderSwap64(gsi_u64);
 #define sprintf_s(_Buffer, BufferSize,Format,...) sprintf(_Buffer,Format,__VA_ARGS__)
 #define _snprintf_s(_Buffer, _BufferSize, BufferCount, Format,...) snprintf(_Buffer, BufferCount, Format, __VA_ARGS__)
 #define strcat_s(dest,destsize,src) strcat(dest,src)
+
+
+#ifdef GSI_UNICODE
+#define _tcsncpy_s(d, size, s, l)	wcsncpy((wchar_t *)d, (wchar_t *)s, l)
+#else
+#define _tcsncpy_(d, size, s, l)	strncpy(d,s,l)
+#endif
+
 #else
 // Conversions from Standard CRT functions to Windows CRT _s functons
 extern struct tm* gmtime_secure(const time_t* t);
@@ -500,6 +508,12 @@ extern char* ctime_secure(const time_t* t);
 #define gmtime gmtime_secure
 #define fopen fopen_secure
 #define ctime ctime_secure
+
+#ifdef GSI_UNICODE
+#define _tcsncpy_s(d, size, s, l)	wcsncpy_s((wchar_t *)d, size, (wchar_t *)s, l)
+#else
+#define _tcsncpy_s(d, size, s, l)	strncpy_s(d, size, s, l)
+#endif
 
 #endif
 

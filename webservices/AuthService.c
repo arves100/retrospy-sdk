@@ -82,7 +82,7 @@ static gsi_bool wsiServiceAvailable()
 	if (__GSIACResult == GSIACAvailable)
 	{
 		if (wsAuthServiceURL[0] == '\0')
-			snprintf(wsAuthServiceURL, WS_LOGIN_MAX_URL_LEN, WS_LOGIN_SERVICE_URL_FORMAT, __GSIACGamename);
+			_snprintf_s(wsAuthServiceURL, _countof(wsAuthServiceURL), WS_LOGIN_MAX_URL_LEN, WS_LOGIN_SERVICE_URL_FORMAT, __GSIACGamename);
 		return gsi_true;
 	}
 	else
@@ -832,7 +832,7 @@ gsi_bool wsLoginCertIsValid(const GSLoginCertificate * cert)
 #define WRITE_NTS(a)  { \
                                   if(lenoutSoFar + _tcslen(a) > maxlen) \
                                       return gsi_false; \
-								  strcpy(bufout+lenoutSoFar, a); \
+								  strcpy_s(bufout+lenoutSoFar, lenoutSoFar + _tcslen(a), a); \
 								  lenoutSoFar += _tcslen(a) + 1; }
 
 #define WRITE_BINARY(a,l)  { \
@@ -917,7 +917,7 @@ gsi_bool wsLoginCertWriteBinary(const GSLoginCertificate * cert, char * bufout, 
 								  lenoutSoFar += sizeof(intHB); }
 #define READ_NTS(a,l)  { \
 								  memset(&a, 0, sizeof(a)); \
-								  _tcsncpy(a, bufin, l); \
+								  _tcsncpy_s(a, _tcslen(bufin)+1, bufin, l); \
 								  if(lenoutSoFar + _tcslen(a)+1 > maxlen) \
                                       return gsi_false; \
 								  bufin += _tcslen(a)+1; \
