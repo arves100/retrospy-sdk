@@ -3,6 +3,8 @@ RetroSpy is a project that aim to create a fully working SDK and Server for Game
 
 This SDK is a fork of GameSpy 2007 SDK, upgraded to newer compiler and maybe try to add the same stuff that GameSpy had in the end of 2014
 
+You could find the original GameSpy 2007 SDK [here](https://github.com/nitrocaster/GameSpy)
+
 Status
 ===
 
