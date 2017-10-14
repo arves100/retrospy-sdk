@@ -58,3 +58,5 @@ Notes
 - NitroWifi should be a package included with Nintendo DS SDK, this header is responsable for socket implementation and pretty much all the test in DS Networking. Because some Dev Units were made without Wifi, i guess Nintendo added Wifi connectivity later to the DS. That could be the reason why it's a separate package.
 
 - I've made a commit that aim to fix CRT_SECURE deprecation for MSVC >= 1300. It needs testing that i can't directly do. I will try to move it to another branch later. See commit [69f488153d149a545324bc4360010ed072391531](https://github.com/arves100/retrospy-sdk/commit/69f488153d149a545324bc4360010ed072391531) and [25cb19f3bb4d890ea8f7826c550a514e6b64e7eb](https://github.com/arves100/retrospy-sdk/commit/25cb19f3bb4d890ea8f7826c550a514e6b64e7eb).
+
+- IGN-LICENSE.txt is the original GS-SDK license. This project is released under BSD-3 license (See LICENSE)
