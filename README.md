@@ -59,4 +59,4 @@ Notes
 
 - I've made a commit that aim to fix CRT_SECURE deprecation for MSVC >= 1300. It needs testing that i can't directly do. I will try to move it to another branch later. See commit [69f488153d149a545324bc4360010ed072391531](https://github.com/arves100/retrospy-sdk/commit/69f488153d149a545324bc4360010ed072391531) and [25cb19f3bb4d890ea8f7826c550a514e6b64e7eb](https://github.com/arves100/retrospy-sdk/commit/25cb19f3bb4d890ea8f7826c550a514e6b64e7eb).
 
-- Currently the SDK dosen't have any license (see [here](https://choosealicense.com/no-license/) for details), unleass i decide what license my modification should have. I want to point that no-license apply ONLY for my own modification of GameSpy SDK and it dosen't apply for original GameSpy SDK (that is released under BSD-3 License). You could still grab the BSD-3 SDK [here](https://github.com/nitrocaster/GameSpy) and do all your experiments!
+- IGN-LICENSE.txt is the original GS-SDK license. This project is released under BSD-3 license (See LICENSE)
