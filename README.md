@@ -1,4 +1,8 @@
 # RetroSpy Software Development Kit
+
+= ATTENTION: I will now work for this project on a different place [GameProgressive](https://github.com/gameprogressive/retrospysdk)
+The reason why i've created a organizzation is because, in the future, if someone will contribute there will be a better "place" than my own account. All of this will be lefted for merging with the new place. =
+
 RetroSpy is a project that aim to create a fully working SDK and Server for GameSpy Services
 
 This SDK is a fork of GameSpy 2007 SDK, upgraded to newer compiler and maybe try to add the same stuff that GameSpy had in the end of 2014
